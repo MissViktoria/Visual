@@ -40,15 +40,11 @@ public class Driver(
 ) : Human(fullName, age, speed) {
 
     public override fun move(dt: Double) {
-        // Вызываем базовую реализацию move из класса Human
         super.move(dt)
-        // Добавляем движение по прямой линии
         val currentX = getX()
         val currentY = getY()
         val newX = currentX + getSpeed() * dt * cos(direction)
         val newY = currentY + getSpeed() * dt * sin(direction)
-        // Для установки новых координат нужно добавить сеттеры в базовый класс
-        // или использовать другой подход
     }
 }
 
@@ -99,3 +95,4 @@ public fun main() {
         println(human.getFinalPosition())
     }
 }
+
