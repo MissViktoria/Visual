@@ -1,5 +1,4 @@
-import kotlin.math.cos
-import kotlin.math.sin
+package com.example.calculator.moveble.src
 
 interface Movable {
     var x: Double
