@@ -13,4 +13,12 @@
         android:text="Калькулятор"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/bGoToPlayerActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Медиа Плеер"
+        android:textSize="18sp"
+        android:layout_margin="10dp" />
+
 </LinearLayout>
