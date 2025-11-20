@@ -21,4 +21,11 @@
         android:textSize="18sp"
         android:layout_margin="10dp" />
 
+    <Button
+        android:id="@+id/bGoToLocationActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    Локация    "
+        android:textSize="18sp" />
+
 </LinearLayout>

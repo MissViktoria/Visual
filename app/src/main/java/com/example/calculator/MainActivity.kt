@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var bGoToCalculator: Button
     private lateinit var bGoToPlayerActivity: Button
+    private lateinit var bGoToLocationActivity: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         bGoToCalculator = findViewById<Button>(R.id.bGoToCalculator)
         bGoToPlayerActivity = findViewById<Button>(R.id.bGoToPlayerActivity)
+        bGoToLocationActivity = findViewById<Button>(R.id.bGoToLocationActivity)
     }
 
     override fun onResume() {
@@ -29,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         bGoToPlayerActivity.setOnClickListener({
             val playerIntent = Intent(this, MediaPlayerActivity::class.java)
             startActivity(playerIntent)
+        });
+
+        bGoToLocationActivity.setOnClickListener({
+            val locationIntent = Intent(this, LocationActivity::class.java)
+            startActivity(locationIntent)
         });
         }
     }
