@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bGoToCalculator: Button
     private lateinit var bGoToPlayerActivity: Button
     private lateinit var bGoToLocationActivity: Button
+    private lateinit var bGoToZmq: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         bGoToCalculator = findViewById<Button>(R.id.bGoToCalculator)
         bGoToPlayerActivity = findViewById<Button>(R.id.bGoToPlayerActivity)
         bGoToLocationActivity = findViewById<Button>(R.id.bGoToLocationActivity)
+        bGoToZmq = findViewById<Button>(R.id.bGoToZmq)
     }
 
     override fun onResume() {
@@ -36,6 +38,11 @@ class MainActivity : AppCompatActivity() {
         bGoToLocationActivity.setOnClickListener({
             val locationIntent = Intent(this, LocationActivity::class.java)
             startActivity(locationIntent)
+        });
+
+        bGoToZmq.setOnClickListener({
+            val zmqIntent = Intent(this, ZmqActivity::class.java)
+            startActivity(zmqIntent)
         });
         }
     }

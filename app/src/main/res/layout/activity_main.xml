@@ -28,4 +28,11 @@
         android:text="    Локация    "
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/bGoToZmq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ZMQ Сокеты "
+        android:textSize="18sp"/>
+
 </LinearLayout>
