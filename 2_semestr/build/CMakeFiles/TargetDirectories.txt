@@ -1,0 +1,5 @@
+/mnt/c/Users/marak/Desktop/2_semestr/build/CMakeFiles/imgui.dir
+/mnt/c/Users/marak/Desktop/2_semestr/build/CMakeFiles/implot.dir
+/mnt/c/Users/marak/Desktop/2_semestr/build/CMakeFiles/main.dir
+/mnt/c/Users/marak/Desktop/2_semestr/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/marak/Desktop/2_semestr/build/CMakeFiles/rebuild_cache.dir
