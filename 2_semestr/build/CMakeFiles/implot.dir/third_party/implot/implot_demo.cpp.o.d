@@ -1,9 +1,9 @@
 CMakeFiles/implot.dir/third_party/implot/implot_demo.cpp.o: \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/implot/implot_demo.cpp \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot_demo.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/implot/implot.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/imgui.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/imconfig.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imgui.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \
@@ -104,8 +104,8 @@ CMakeFiles/implot.dir/third_party/implot/implot_demo.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/timex.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/implot/implot_internal.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/imgui_internal.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot_internal.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imgui_internal.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \

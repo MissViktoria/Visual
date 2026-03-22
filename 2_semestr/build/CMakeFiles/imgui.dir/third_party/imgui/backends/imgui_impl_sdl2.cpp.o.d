@@ -1,8 +1,8 @@
 CMakeFiles/imgui.dir/third_party/imgui/backends/imgui_impl_sdl2.cpp.o: \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.cpp \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/imgui.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/imconfig.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imgui.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imconfig.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/string.h \
@@ -17,7 +17,7 @@ CMakeFiles/imgui.dir/third_party/imgui/backends/imgui_impl_sdl2.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/assert.h \
- /mnt/c/Users/marak/Desktop/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \

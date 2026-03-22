@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(backend_notes)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 set(THIRD_PARTY_DIR ${PROJECT_SOURCE_DIR}/third_party)
 set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
@@ -15,7 +16,11 @@ include_directories(${SDL2_INCLUDE_DIRS})
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
-include_directories(${INCLUDE_DIR})
+# ZeroMQ - ИСПРАВЛЕНО!
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(ZMQ REQUIRED libzmq)
+
+include_directories(${INCLUDE_DIR} ${ZMQ_INCLUDE_DIRS})
 
 add_library(imgui STATIC
     ${THIRD_PARTY_DIR}/imgui/imgui.cpp
@@ -39,4 +44,12 @@ target_link_libraries(implot PRIVATE imgui)
 target_compile_options(implot PRIVATE -fPIC)
 
 add_executable(main ${SRC_DIR}/main.cpp)
-target_link_libraries(main PRIVATE imgui implot ${SDL2_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
+
+target_link_libraries(main PRIVATE 
+    imgui 
+    implot 
+    ${SDL2_LIBRARIES} 
+    ${OPENGL_LIBRARIES} 
+    ${GLEW_LIBRARIES}
+    ${ZMQ_LIBRARIES} 
+)

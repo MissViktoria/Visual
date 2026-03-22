@@ -93,6 +93,16 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_cell_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Информация о сети: не получена"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:background="#f0f0f0" />
+
     <Button
         android:id="@+id/btn_get_location"
         android:layout_width="match_parent"

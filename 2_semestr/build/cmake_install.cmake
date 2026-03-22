@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/marak/Desktop/2_semestr
+# Install script for directory: /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/marak/Desktop/2_semestr/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

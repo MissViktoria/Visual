@@ -1,0 +1,4729 @@
+[
+  {
+    "counter": 1,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639026124
+    },
+    "timestamp": "2026-03-16T12:30:25"
+  },
+  {
+    "counter": 2,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639026125
+    },
+    "timestamp": "2026-03-16T12:30:25"
+  },
+  {
+    "counter": 3,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639027127
+    },
+    "timestamp": "2026-03-16T12:30:26"
+  },
+  {
+    "counter": 4,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639028128
+    },
+    "timestamp": "2026-03-16T12:30:27"
+  },
+  {
+    "counter": 5,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639029129
+    },
+    "timestamp": "2026-03-16T12:30:28"
+  },
+  {
+    "counter": 6,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639030128
+    },
+    "timestamp": "2026-03-16T12:30:29"
+  },
+  {
+    "counter": 7,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639031129
+    },
+    "timestamp": "2026-03-16T12:30:30"
+  },
+  {
+    "counter": 8,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639032132
+    },
+    "timestamp": "2026-03-16T12:30:31"
+  },
+  {
+    "counter": 9,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.353326,
+        "altitude": 133.101318359375,
+        "bearing": 0,
+        "latitude": 55.01337304,
+        "longitude": 82.95037258,
+        "speed": 0,
+        "timestamp": 1773638962000
+      },
+      "sendTime": 1773639033131
+    },
+    "timestamp": "2026-03-16T12:30:32"
+  },
+  {
+    "counter": 10,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 48.028076,
+        "altitude": 129.44091796875,
+        "bearing": 0,
+        "latitude": 55.01338661,
+        "longitude": 82.95026147,
+        "speed": 0,
+        "timestamp": 1773639033000
+      },
+      "sendTime": 1773639034132
+    },
+    "timestamp": "2026-03-16T12:30:33"
+  },
+  {
+    "counter": 11,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 27.76306,
+        "altitude": 127.91839599609375,
+        "bearing": 0,
+        "latitude": 55.01337049,
+        "longitude": 82.95028173,
+        "speed": 0,
+        "timestamp": 1773639034000
+      },
+      "sendTime": 1773639035133
+    },
+    "timestamp": "2026-03-16T12:30:34"
+  },
+  {
+    "counter": 1,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.803333,
+        "altitude": 120.37945556640625,
+        "bearing": 0,
+        "latitude": 55.01331706,
+        "longitude": 82.95043661,
+        "speed": 0,
+        "timestamp": 1773639035000
+      },
+      "sendTime": 1773639036133
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 2,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 19.101582,
+        "altitude": 122.87432861328125,
+        "bearing": 0,
+        "latitude": 55.01333781,
+        "longitude": 82.95040325,
+        "speed": 0,
+        "timestamp": 1773639036000
+      },
+      "sendTime": 1773639037134
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 3,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 18.416348,
+        "altitude": 122.44915771484375,
+        "bearing": 0,
+        "latitude": 55.01333,
+        "longitude": 82.95042636,
+        "speed": 0,
+        "timestamp": 1773639037000
+      },
+      "sendTime": 1773639038134
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 4,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 18.416348,
+        "altitude": 122.44915771484375,
+        "bearing": 0,
+        "latitude": 55.01333,
+        "longitude": 82.95042636,
+        "speed": 0,
+        "timestamp": 1773639037000
+      },
+      "sendTime": 1773639039135
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 5,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 18.666254,
+        "altitude": 123.07659912109375,
+        "bearing": 0,
+        "latitude": 55.01333403,
+        "longitude": 82.95040787,
+        "speed": 0,
+        "timestamp": 1773639039000
+      },
+      "sendTime": 1773639040135
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 6,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 18.666254,
+        "altitude": 123.07659912109375,
+        "bearing": 0,
+        "latitude": 55.01333403,
+        "longitude": 82.95040787,
+        "speed": 0,
+        "timestamp": 1773639039000
+      },
+      "sendTime": 1773639041136
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 7,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 22.242022,
+        "altitude": 120.70623779296875,
+        "bearing": 0,
+        "latitude": 55.01330117,
+        "longitude": 82.95050197,
+        "speed": 0,
+        "timestamp": 1773639041000
+      },
+      "sendTime": 1773639042137
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 8,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 22.242022,
+        "altitude": 120.70623779296875,
+        "bearing": 0,
+        "latitude": 55.01330117,
+        "longitude": 82.95050197,
+        "speed": 0,
+        "timestamp": 1773639041000
+      },
+      "sendTime": 1773639043138
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 9,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 22.242022,
+        "altitude": 120.70623779296875,
+        "bearing": 0,
+        "latitude": 55.01330117,
+        "longitude": 82.95050197,
+        "speed": 0,
+        "timestamp": 1773639041000
+      },
+      "sendTime": 1773639044138
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 10,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 26.999754,
+        "altitude": 121.1495361328125,
+        "bearing": 0,
+        "latitude": 55.01330645,
+        "longitude": 82.9504865,
+        "speed": 0,
+        "timestamp": 1773639044000
+      },
+      "sendTime": 1773639045140
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 11,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 26.999754,
+        "altitude": 121.1495361328125,
+        "bearing": 0,
+        "latitude": 55.01330645,
+        "longitude": 82.9504865,
+        "speed": 0,
+        "timestamp": 1773639044000
+      },
+      "sendTime": 1773639046140
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 12,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 26.999754,
+        "altitude": 121.1495361328125,
+        "bearing": 0,
+        "latitude": 55.01330645,
+        "longitude": 82.9504865,
+        "speed": 0,
+        "timestamp": 1773639044000
+      },
+      "sendTime": 1773639047144
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 13,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.447823,
+        "altitude": 119.3543701171875,
+        "bearing": 0,
+        "latitude": 55.01329324,
+        "longitude": 82.95052291,
+        "speed": 0,
+        "timestamp": 1773639047000
+      },
+      "sendTime": 1773639048142
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 14,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.447823,
+        "altitude": 119.3543701171875,
+        "bearing": 0,
+        "latitude": 55.01329324,
+        "longitude": 82.95052291,
+        "speed": 0,
+        "timestamp": 1773639047000
+      },
+      "sendTime": 1773639049143
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 15,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.898777,
+        "altitude": 117.25335693359375,
+        "bearing": 0,
+        "latitude": 55.01326369,
+        "longitude": 82.95060766,
+        "speed": 0,
+        "timestamp": 1773639049000
+      },
+      "sendTime": 1773639050145
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 16,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.898777,
+        "altitude": 117.25335693359375,
+        "bearing": 0,
+        "latitude": 55.01326369,
+        "longitude": 82.95060766,
+        "speed": 0,
+        "timestamp": 1773639049000
+      },
+      "sendTime": 1773639051145
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 17,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 27.100838,
+        "altitude": 116.1365966796875,
+        "bearing": 0,
+        "latitude": 55.01324818,
+        "longitude": 82.95065185,
+        "speed": 0,
+        "timestamp": 1773639051000
+      },
+      "sendTime": 1773639052145
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 18,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.949612,
+        "altitude": 114.5753173828125,
+        "bearing": 0,
+        "latitude": 55.01323554,
+        "longitude": 82.95068439,
+        "speed": 0,
+        "timestamp": 1773639052000
+      },
+      "sendTime": 1773639053146
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 19,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.949612,
+        "altitude": 114.5753173828125,
+        "bearing": 0,
+        "latitude": 55.01323554,
+        "longitude": 82.95068439,
+        "speed": 0,
+        "timestamp": 1773639052000
+      },
+      "sendTime": 1773639054147
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 20,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.949612,
+        "altitude": 114.5753173828125,
+        "bearing": 0,
+        "latitude": 55.01323554,
+        "longitude": 82.95068439,
+        "speed": 0,
+        "timestamp": 1773639052000
+      },
+      "sendTime": 1773639055147
+    },
+    "timestamp": "2026-03-16T12:33:10"
+  },
+  {
+    "counter": 21,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 25.949612,
+        "altitude": 114.5753173828125,
+        "bearing": 0,
+        "latitude": 55.01323554,
+        "longitude": 82.95068439,
+        "speed": 0,
+        "timestamp": 1773639052000
+      },
+      "sendTime": 1773639056146
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 22,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 26.028976,
+        "altitude": 115.3492431640625,
+        "bearing": 0,
+        "latitude": 55.01324439,
+        "longitude": 82.95066063,
+        "speed": 0,
+        "timestamp": 1773639056000
+      },
+      "sendTime": 1773639057146
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 23,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639058148
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 24,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639059149
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 25,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639060150
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 26,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639061150
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 27,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639062150
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 28,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639063151
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 29,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639064151
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 30,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639065152
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 31,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 24.226164,
+        "altitude": 118.94677734375,
+        "bearing": 0,
+        "latitude": 55.01327191,
+        "longitude": 82.95059244,
+        "speed": 0,
+        "timestamp": 1773639057000
+      },
+      "sendTime": 1773639066153
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 32,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.446497,
+        "altitude": 120.20831298828125,
+        "bearing": 0,
+        "latitude": 55.01327822,
+        "longitude": 82.95057555,
+        "speed": 0,
+        "timestamp": 1773639066000
+      },
+      "sendTime": 1773639067153
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 33,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.974842,
+        "altitude": 119.17095947265625,
+        "bearing": 0,
+        "latitude": 55.01327054,
+        "longitude": 82.95059732,
+        "speed": 0,
+        "timestamp": 1773639067000
+      },
+      "sendTime": 1773639068156
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 34,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.038387,
+        "altitude": 118.4334716796875,
+        "bearing": 0,
+        "latitude": 55.01326529,
+        "longitude": 82.95061214,
+        "speed": 0,
+        "timestamp": 1773639068000
+      },
+      "sendTime": 1773639069157
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 35,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639070157
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 36,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639071158
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 37,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639072159
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 38,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639073160
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 39,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639074161
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 40,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639075161
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 41,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639076163
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 42,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639077163
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 43,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639078164
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 44,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 15.667771,
+        "altitude": 120.66900634765625,
+        "bearing": 0,
+        "latitude": 55.01328274,
+        "longitude": 82.95056808,
+        "speed": 0,
+        "timestamp": 1773639069000
+      },
+      "sendTime": 1773639079164
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 45,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.098988,
+        "altitude": 122.06402587890625,
+        "bearing": 0,
+        "latitude": 55.01329329,
+        "longitude": 82.95054186,
+        "speed": 0,
+        "timestamp": 1773639079000
+      },
+      "sendTime": 1773639080164
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 46,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.098988,
+        "altitude": 122.06402587890625,
+        "bearing": 0,
+        "latitude": 55.01329329,
+        "longitude": 82.95054186,
+        "speed": 0,
+        "timestamp": 1773639079000
+      },
+      "sendTime": 1773639081164
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 47,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 16.776445,
+        "altitude": 126.7239990234375,
+        "bearing": 0,
+        "latitude": 55.01332718,
+        "longitude": 82.95045925,
+        "speed": 0,
+        "timestamp": 1773639081000
+      },
+      "sendTime": 1773639082163
+    },
+    "timestamp": "2026-03-16T12:33:11"
+  },
+  {
+    "counter": 48,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 16.776445,
+        "altitude": 126.7239990234375,
+        "bearing": 0,
+        "latitude": 55.01332718,
+        "longitude": 82.95045925,
+        "speed": 0,
+        "timestamp": 1773639081000
+      },
+      "sendTime": 1773639083164
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 49,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 16.776445,
+        "altitude": 126.7239990234375,
+        "bearing": 0,
+        "latitude": 55.01332718,
+        "longitude": 82.95045925,
+        "speed": 0,
+        "timestamp": 1773639081000
+      },
+      "sendTime": 1773639084164
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 50,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 19.734686,
+        "altitude": 127.2254638671875,
+        "bearing": 0,
+        "latitude": 55.01333258,
+        "longitude": 82.95044665,
+        "speed": 0,
+        "timestamp": 1773639084000
+      },
+      "sendTime": 1773639085165
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 51,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639086165
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 52,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639087166
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 53,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639088167
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 54,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639089167
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 55,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639090166
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 56,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 20.36545,
+        "altitude": 128.08966064453125,
+        "bearing": 0,
+        "latitude": 55.01334177,
+        "longitude": 82.95042608,
+        "speed": 0,
+        "timestamp": 1773639085000
+      },
+      "sendTime": 1773639091168
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 57,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639092172
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 58,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639093174
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 59,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639094175
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 60,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639095177
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 61,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639096180
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 62,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639097179
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 63,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639098181
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 64,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639099183
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 65,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639100184
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 66,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639101185
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 67,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639102186
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 68,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639103189
+    },
+    "timestamp": "2026-03-16T12:33:12"
+  },
+  {
+    "counter": 69,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639104190
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 70,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639105192
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 71,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639106193
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 72,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639107195
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 73,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639108197
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 74,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639109198
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 75,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639110200
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 76,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639111202
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 77,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639112203
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 78,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639113206
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 79,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639114207
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 80,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639115208
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 81,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639116211
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 82,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639117212
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 83,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639118214
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 84,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639119216
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 85,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639120218
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 86,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639121220
+    },
+    "timestamp": "2026-03-16T12:33:13"
+  },
+  {
+    "counter": 87,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639122222
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 88,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639123224
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 89,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639124225
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 90,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639125226
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 91,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639126228
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 92,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639127230
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 93,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639128233
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 94,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639129235
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 95,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639130236
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 96,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639131238
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 97,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639132240
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 98,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639133242
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 99,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639134243
+    },
+    "timestamp": "2026-03-16T12:33:14"
+  },
+  {
+    "counter": 100,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639135246
+    },
+    "timestamp": "2026-03-16T12:33:15"
+  },
+  {
+    "counter": 101,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639136247
+    },
+    "timestamp": "2026-03-16T12:33:15"
+  },
+  {
+    "counter": 102,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639137250
+    },
+    "timestamp": "2026-03-16T12:33:16"
+  },
+  {
+    "counter": 103,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639138251
+    },
+    "timestamp": "2026-03-16T12:33:16"
+  },
+  {
+    "counter": 104,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639139252
+    },
+    "timestamp": "2026-03-16T12:33:16"
+  },
+  {
+    "counter": 105,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639140255
+    },
+    "timestamp": "2026-03-16T12:33:17"
+  },
+  {
+    "counter": 106,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639141257
+    },
+    "timestamp": "2026-03-16T12:33:17"
+  },
+  {
+    "counter": 107,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639142259
+    },
+    "timestamp": "2026-03-16T12:33:17"
+  },
+  {
+    "counter": 108,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639143261
+    },
+    "timestamp": "2026-03-16T12:33:17"
+  },
+  {
+    "counter": 109,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639144263
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 110,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639145264
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 111,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639146265
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 112,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639147268
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 113,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639148270
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 114,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639149271
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 115,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639150274
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 116,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639151275
+    },
+    "timestamp": "2026-03-16T12:33:18"
+  },
+  {
+    "counter": 117,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639152277
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 118,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639153280
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 119,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639154281
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 120,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639155283
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 121,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639156284
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 122,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639157286
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 123,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639158288
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 124,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639159290
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 125,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639160292
+    },
+    "timestamp": "2026-03-16T12:33:19"
+  },
+  {
+    "counter": 126,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639161293
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 127,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639162294
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 128,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639163296
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 129,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639164298
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 130,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639165301
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 131,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639166301
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 132,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639167303
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 133,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639168305
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 134,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639169306
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 135,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639170308
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 136,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639171309
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 137,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639172312
+    },
+    "timestamp": "2026-03-16T12:33:20"
+  },
+  {
+    "counter": 138,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639173314
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 139,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639174316
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 140,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639175317
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 141,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639176318
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 142,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639177320
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 143,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639178322
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 144,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639179324
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 145,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639180325
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 146,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639181326
+    },
+    "timestamp": "2026-03-16T12:33:21"
+  },
+  {
+    "counter": 147,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639182329
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  },
+  {
+    "counter": 148,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639183330
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  },
+  {
+    "counter": 149,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 0,
+          "mcc": 0,
+          "mnc": 0
+        },
+        "networkType": "UNKNOWN",
+        "signalStrength": {
+          "dbm": 0,
+          "rsrp": 0
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639184332
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  },
+  {
+    "counter": 150,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639185333
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  },
+  {
+    "counter": 151,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639186335
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  },
+  {
+    "counter": 152,
+    "data": {
+      "cellInfo": {
+        "cellIdentity": {
+          "cellId": 138259478,
+          "mcc": 250,
+          "mnc": 20
+        },
+        "networkType": "LTE",
+        "signalStrength": {
+          "dbm": -92,
+          "rsrp": -92
+        }
+      },
+      "deviceId": "phone_f01270",
+      "location": {
+        "accuracy": 17.750072,
+        "altitude": 129.91522216796875,
+        "bearing": 0,
+        "latitude": 55.01335648,
+        "longitude": 82.95038792,
+        "speed": 0,
+        "timestamp": 1773639091000
+      },
+      "sendTime": 1773639187335
+    },
+    "timestamp": "2026-03-16T12:33:22"
+  }
+]
