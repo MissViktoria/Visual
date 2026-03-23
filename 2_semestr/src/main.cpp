@@ -25,19 +25,206 @@
 using namespace std;
 using json = nlohmann::json;
 
+// Расширенная структура данных с телефона
+struct CellIdentityLte {
+    int band = 0;
+    int earfcn = 0;
+    int mcc = 0;
+    int mnc = 0;
+    int pci = 0;
+    int tac = 0;
+    string cellIdentity;
+};
+
+struct CellSignalStrengthLte {
+    int asuLevel = 0;
+    int cqi = 0;
+    int rsrp = 0;
+    int rsrq = 0;
+    int rssi = 0;
+    int rssnr = 0;
+    int timingAdvance = 0;
+};
+
+struct CellIdentityGsm {
+    int bsic = 0;
+    int arfcn = 0;
+    int lac = 0;
+    int mcc = 0;
+    int mnc = 0;
+    int psc = 0;
+    string cellIdentity;
+};
+
+struct CellSignalStrengthGsm {
+    int dbm = 0;
+    int rssi = 0;
+    int timingAdvance = 0;
+};
+
+struct CellIdentityNr {
+    int band = 0;
+    int nci = 0;
+    int pci = 0;
+    int nrarfcn = 0;
+    int tac = 0;
+    int mcc = 0;
+    int mnc = 0;
+};
+
+struct CellSignalStrengthNr {
+    int ssRsrp = 0;
+    int ssRsrq = 0;
+    int ssSinr = 0;
+    int timingAdvance = 0;
+};
+
 // Данные с телефона
+
 struct PhoneData {
+    // Геолокация
     double latitude = 55.7558;
     double longitude = 37.1234;
-    string network = "LTE";
-    int signal = -65;
-    string time = "N/A";
-    string deviceId = "unknown";
     double altitude = 0.0;
+    float accuracy = 0.0f;
+    string time = "N/A";
+    
+    // Тип сети
+    string networkType = "UNKNOWN";
+    
+    // LTE данные
+    CellIdentityLte lteIdentity;
+    CellSignalStrengthLte lteSignal;
+    
+    // GSM данные
+    CellIdentityGsm gsmIdentity;
+    CellSignalStrengthGsm gsmSignal;
+    
+    // 5G NR данные
+    CellIdentityNr nrIdentity;
+    CellSignalStrengthNr nrSignal;
+    
+    // Трафик
+    long long totalTxBytes = 0;
+    long long totalRxBytes = 0;
+    vector<pair<string, long long>> topApps; // название приложения -> байты
+    
+    string deviceId = "unknown";
 };
 
 PhoneData g_phone_data;
 mutex g_data_mutex;
+
+void updatePhoneData(const json& data) {
+    PhoneData new_data;
+    
+    // Парсинг геолокации
+    if (data.contains("location")) {
+        const auto& loc = data["location"];
+        new_data.latitude = loc.value("latitude", 55.7558);
+        new_data.longitude = loc.value("longitude", 37.1234);
+        new_data.altitude = loc.value("altitude", 0.0);
+        new_data.accuracy = loc.value("accuracy", 0.0f);
+        
+        long timestamp = loc.value("timestamp", 0L);
+        if (timestamp > 0) {
+            time_t seconds = timestamp / 1000;
+            char buffer[80];
+            strftime(buffer, sizeof(buffer), "%H:%M:%S", localtime(&seconds));
+            new_data.time = string(buffer);
+        }
+    }
+    
+    // Парсинг информации о соте
+    if (data.contains("cellInfo")) {
+        const auto& cell = data["cellInfo"];
+        new_data.networkType = cell.value("networkType", "UNKNOWN");
+        
+        // LTE данные
+        if (new_data.networkType == "LTE" && cell.contains("identity")) {
+            const auto& identity = cell["identity"];
+            new_data.lteIdentity.band = identity.value("band", 0);
+            new_data.lteIdentity.earfcn = identity.value("earfcn", 0);
+            new_data.lteIdentity.mcc = identity.value("mcc", 0);
+            new_data.lteIdentity.mnc = identity.value("mnc", 0);
+            new_data.lteIdentity.pci = identity.value("pci", 0);
+            new_data.lteIdentity.tac = identity.value("tac", 0);
+            new_data.lteIdentity.cellIdentity = identity.value("cellIdentity", "");
+        }
+        
+        if (new_data.networkType == "LTE" && cell.contains("signalStrength")) {
+            const auto& signal = cell["signalStrength"];
+            new_data.lteSignal.asuLevel = signal.value("asuLevel", 0);
+            new_data.lteSignal.cqi = signal.value("cqi", 0);
+            new_data.lteSignal.rsrp = signal.value("rsrp", -140);
+            new_data.lteSignal.rsrq = signal.value("rsrq", -20);
+            new_data.lteSignal.rssi = signal.value("rssi", -120);
+            new_data.lteSignal.rssnr = signal.value("rssnr", 0);
+            new_data.lteSignal.timingAdvance = signal.value("timingAdvance", 0);
+        }
+        
+        // GSM данные
+        if (new_data.networkType == "GSM" && cell.contains("identity")) {
+            const auto& identity = cell["identity"];
+            new_data.gsmIdentity.bsic = identity.value("bsic", 0);
+            new_data.gsmIdentity.arfcn = identity.value("arfcn", 0);
+            new_data.gsmIdentity.lac = identity.value("lac", 0);
+            new_data.gsmIdentity.mcc = identity.value("mcc", 0);
+            new_data.gsmIdentity.mnc = identity.value("mnc", 0);
+            new_data.gsmIdentity.psc = identity.value("psc", 0);
+            new_data.gsmIdentity.cellIdentity = identity.value("cellIdentity", "");
+        }
+        
+        if (new_data.networkType == "GSM" && cell.contains("signalStrength")) {
+            const auto& signal = cell["signalStrength"];
+            new_data.gsmSignal.dbm = signal.value("dbm", -120);
+            new_data.gsmSignal.rssi = signal.value("rssi", 0);
+            new_data.gsmSignal.timingAdvance = signal.value("timingAdvance", 0);
+        }
+        
+        // 5G NR данные
+        if (new_data.networkType == "5G_NR" && cell.contains("identity")) {
+            const auto& identity = cell["identity"];
+            new_data.nrIdentity.band = identity.value("band", 0);
+            new_data.nrIdentity.nci = identity.value("nci", 0);
+            new_data.nrIdentity.pci = identity.value("pci", 0);
+            new_data.nrIdentity.nrarfcn = identity.value("nrarfcn", 0);
+            new_data.nrIdentity.tac = identity.value("tac", 0);
+            new_data.nrIdentity.mcc = identity.value("mcc", 0);
+            new_data.nrIdentity.mnc = identity.value("mnc", 0);
+        }
+        
+        if (new_data.networkType == "5G_NR" && cell.contains("signalStrength")) {
+            const auto& signal = cell["signalStrength"];
+            new_data.nrSignal.ssRsrp = signal.value("ssRsrp", -140);
+            new_data.nrSignal.ssRsrq = signal.value("ssRsrq", -20);
+            new_data.nrSignal.ssSinr = signal.value("ssSinr", 0);
+            new_data.nrSignal.timingAdvance = signal.value("timingAdvance", 0);
+        }
+    }
+    
+    // Парсинг данных о трафике (опционально)
+    if (data.contains("traffic")) {
+        const auto& traffic = data["traffic"];
+        new_data.totalTxBytes = traffic.value("totalTxBytes", 0LL);
+        new_data.totalRxBytes = traffic.value("totalRxBytes", 0LL);
+        
+        if (traffic.contains("topApps")) {
+            new_data.topApps.clear();
+            for (const auto& app : traffic["topApps"]) {
+                new_data.topApps.push_back({
+                    app.value("packageName", "unknown"),
+                    app.value("bytes", 0LL)
+                });
+            }
+        }
+    }
+    
+    new_data.deviceId = data.value("deviceId", "unknown");
+    
+    lock_guard<mutex> lock(g_data_mutex);
+    g_phone_data = new_data;
+}
 
 // Класс сервера
 class ZmqServer {
@@ -73,43 +260,43 @@ private:
         return ss.str();
     }
 
-    void updatePhoneData(const json& data) {
-        PhoneData new_data;
+    // void updatePhoneData(const json& data) {
+    //     PhoneData new_data;
         
-        if (data.contains("location")) {
-            new_data.latitude = data["location"].value("latitude", 55.7558);
-            new_data.longitude = data["location"].value("longitude", 37.1234);
-            new_data.altitude = data["location"].value("altitude", 0.0);
+    //     if (data.contains("location")) {
+    //         new_data.latitude = data["location"].value("latitude", 55.7558);
+    //         new_data.longitude = data["location"].value("longitude", 37.1234);
+    //         new_data.altitude = data["location"].value("altitude", 0.0);
             
-            long timestamp = data["location"].value("timestamp", 0L);
-            if (timestamp > 0) {
-                time_t seconds = timestamp / 1000;
-                char buffer[80];
-                strftime(buffer, sizeof(buffer), "%H:%M:%S", localtime(&seconds));
-                new_data.time = string(buffer);
-            }
-        }
+    //         long timestamp = data["location"].value("timestamp", 0L);
+    //         if (timestamp > 0) {
+    //             time_t seconds = timestamp / 1000;
+    //             char buffer[80];
+    //             strftime(buffer, sizeof(buffer), "%H:%M:%S", localtime(&seconds));
+    //             new_data.time = string(buffer);
+    //         }
+    //     }
         
-        if (data.contains("cellInfo")) {
-            new_data.network = data["cellInfo"].value("networkType", "LTE");
+    //     if (data.contains("cellInfo")) {
+    //         new_data.network = data["cellInfo"].value("networkType", "LTE");
             
-            if (data["cellInfo"].contains("signalStrength")) {
-                const auto& signal = data["cellInfo"]["signalStrength"];
-                if (new_data.network == "LTE") {
-                    new_data.signal = signal.value("rsrp", -65);
-                } else if (new_data.network == "GSM") {
-                    new_data.signal = signal.value("dbm", -65);
-                } else if (new_data.network == "5G_NR") {
-                    new_data.signal = signal.value("ssRsrp", -65);
-                }
-            }
-        }
+    //         if (data["cellInfo"].contains("signalStrength")) {
+    //             const auto& signal = data["cellInfo"]["signalStrength"];
+    //             if (new_data.network == "LTE") {
+    //                 new_data.signal = signal.value("rsrp", -65);
+    //             } else if (new_data.network == "GSM") {
+    //                 new_data.signal = signal.value("dbm", -65);
+    //             } else if (new_data.network == "5G_NR") {
+    //                 new_data.signal = signal.value("ssRsrp", -65);
+    //             }
+    //         }
+    //     }
         
-        new_data.deviceId = data.value("deviceId", "unknown");
+    //     new_data.deviceId = data.value("deviceId", "unknown");
         
-        lock_guard<mutex> lock(g_data_mutex);
-        g_phone_data = new_data;
-    }
+    //     lock_guard<mutex> lock(g_data_mutex);
+    //     g_phone_data = new_data;
+    // }
 
 public:
     ZmqServer(string h = "*", int p = 7777) 
@@ -159,7 +346,7 @@ public:
                     printData(data);
                     
                     // Обновляем данные для GUI
-                    updatePhoneData(data);
+                    ::updatePhoneData(data);
 
                 } catch (const json::parse_error& e) {
                     log("ERROR", string("Ошибка декодирования JSON: ") + e.what());
@@ -314,24 +501,195 @@ void run_gui(){
             ImGui::End();
         }
 // 3.2) Наш виджет с данными;
+       // Окно с детальной информацией
+    {
+        PhoneData local_data;
         {
-            PhoneData local_data;
-            {
-                lock_guard<mutex> lock(g_data_mutex);
-                local_data = g_phone_data;
-            }
-
-            ImGui::Begin("Dannue s televona");
-            
-            ImGui::Text("Bremi: %s", local_data.time.c_str());
-            ImGui::Separator();
-            ImGui::Text("Koordinaty: %.4f, %.4f", 
-                       local_data.latitude, local_data.longitude);
-            ImGui::Text("Ceti: %s", local_data.network.c_str());
-            ImGui::Text("Cignal: %d dBm", local_data.signal);
-            
-            ImGui::End();
+            lock_guard<mutex> lock(g_data_mutex);
+            local_data = g_phone_data;
         }
+
+        // Основное окно
+        ImGui::Begin("Dannue c telefona");
+        
+        // Информация об устройстве
+        ImGui::Text("Ystroustvo: %s", local_data.deviceId.c_str());
+        ImGui::Text("Bremi: %s", local_data.time.c_str());
+        ImGui::Separator();
+        
+        // Геолокация
+        ImGui::Text("Mestopolochenie:");
+        ImGui::Text("  Shirota: %.6f", local_data.latitude);
+        ImGui::Text("  Dolgota: %.6f", local_data.longitude);
+        ImGui::Text("  Bysota: %.2f m", local_data.altitude);
+        ImGui::Text("  Tochnosti: %.2f m", local_data.accuracy);
+        ImGui::Separator();
+        
+        // Информация о сети
+        ImGui::Text("Sotovai seti: %s", local_data.networkType.c_str());
+        
+        // LTE данные
+        if (local_data.networkType == "LTE") {
+            if (ImGui::CollapsingHeader("LTE Identity")) {
+                ImGui::Text("  Band: %d", local_data.lteIdentity.band);
+                ImGui::Text("  EARFCN: %d", local_data.lteIdentity.earfcn);
+                ImGui::Text("  MCC/MNC: %d/%d", local_data.lteIdentity.mcc, local_data.lteIdentity.mnc);
+                ImGui::Text("  PCI: %d", local_data.lteIdentity.pci);
+                ImGui::Text("  TAC: %d", local_data.lteIdentity.tac);
+                ImGui::Text("  Cell ID: %s", local_data.lteIdentity.cellIdentity.c_str());
+            }
+            
+            if (ImGui::CollapsingHeader("LTE Signal Strength")) {
+                ImGui::Text("  RSRP: %d dBm", local_data.lteSignal.rsrp);
+                ImGui::Text("  RSRQ: %d dB", local_data.lteSignal.rsrq);
+                ImGui::Text("  RSSI: %d dBm", local_data.lteSignal.rssi);
+                ImGui::Text("  RSSNR: %d dB", local_data.lteSignal.rssnr);
+                ImGui::Text("  CQI: %d", local_data.lteSignal.cqi);
+                ImGui::Text("  ASU Level: %d", local_data.lteSignal.asuLevel);
+                ImGui::Text("  Timing Advance: %d", local_data.lteSignal.timingAdvance);
+                
+            }
+        }
+        
+        // GSM данные
+        if (local_data.networkType == "GSM") {
+            if (ImGui::CollapsingHeader("GSM Identity")) {
+                ImGui::Text("  BSIC: %d", local_data.gsmIdentity.bsic);
+                ImGui::Text("  ARFCN: %d", local_data.gsmIdentity.arfcn);
+                ImGui::Text("  LAC: %d", local_data.gsmIdentity.lac);
+                ImGui::Text("  MCC/MNC: %d/%d", local_data.gsmIdentity.mcc, local_data.gsmIdentity.mnc);
+                ImGui::Text("  PSC: %d", local_data.gsmIdentity.psc);
+                ImGui::Text("  Cell ID: %s", local_data.gsmIdentity.cellIdentity.c_str());
+            }
+            
+            if (ImGui::CollapsingHeader("GSM Signal Strength")) {
+                ImGui::Text("  DBM: %d dBm", local_data.gsmSignal.dbm);
+                ImGui::Text("  RSSI: %d", local_data.gsmSignal.rssi);
+                ImGui::Text("  Timing Advance: %d", local_data.gsmSignal.timingAdvance);
+            }
+        }
+        
+        // 5G NR данные
+        if (local_data.networkType == "5G_NR") {
+            if (ImGui::CollapsingHeader("5G NR Identity")) {
+                ImGui::Text("  Band: %d", local_data.nrIdentity.band);
+                ImGui::Text("  NCI: %d", local_data.nrIdentity.nci);
+                ImGui::Text("  PCI: %d", local_data.nrIdentity.pci);
+                ImGui::Text("  NRARFCN: %d", local_data.nrIdentity.nrarfcn);
+                ImGui::Text("  TAC: %d", local_data.nrIdentity.tac);
+                ImGui::Text("  MCC/MNC: %d/%d", local_data.nrIdentity.mcc, local_data.nrIdentity.mnc);
+            }
+            
+            if (ImGui::CollapsingHeader("5G NR Signal Strength")) {
+                ImGui::Text("  SS-RSRP: %d dBm", local_data.nrSignal.ssRsrp);
+                ImGui::Text("  SS-RSRQ: %d dB", local_data.nrSignal.ssRsrq);
+                ImGui::Text("  SS-SINR: %d dB", local_data.nrSignal.ssSinr);
+                ImGui::Text("  Timing Advance: %d", local_data.nrSignal.timingAdvance);
+            }
+        }
+        
+        // Данные о трафике (опционально)
+        if (local_data.totalTxBytes > 0 || local_data.totalRxBytes > 0) {
+            ImGui::Separator();
+            ImGui::Text("Sotovui trafik:");
+            ImGui::Text("  Peredano: %.2f MB", local_data.totalTxBytes / (1024.0 * 1024.0));
+            ImGui::Text("  Polucheno: %.2f MB", local_data.totalRxBytes / (1024.0 * 1024.0));
+            
+            if (!local_data.topApps.empty()) {
+                ImGui::Text("Top prilocheiy po trafiku:");
+                for (const auto& app : local_data.topApps) {
+                    ImGui::Text("  %s: %.2f MB", 
+                            app.first.c_str(), 
+                            app.second / (1024.0 * 1024.0));
+                }
+            }
+        }
+        
+        ImGui::End();
+    }
+
+        //График изменения сигнала - поддержка всех типов сетей
+    {
+        static vector<float> lte_rsrp_history;
+        static vector<float> lte_rsrq_history;
+        static vector<float> gsm_dbm_history;
+        static vector<float> nr_ssrsrp_history;
+        
+        PhoneData local_data;
+        {
+            lock_guard<mutex> lock(g_data_mutex);
+            local_data = g_phone_data;
+        }
+        
+        // Сохраняем историю в зависимости от типа сети
+        if (local_data.networkType == "LTE") {
+            lte_rsrp_history.push_back(local_data.lteSignal.rsrp);
+            lte_rsrq_history.push_back(local_data.lteSignal.rsrq);
+            
+            // Ограничиваем размер истории (последние 100 значений)
+            if (lte_rsrp_history.size() > 100) {
+                lte_rsrp_history.erase(lte_rsrp_history.begin());
+                lte_rsrq_history.erase(lte_rsrq_history.begin());
+            }
+        }
+        else if (local_data.networkType == "GSM") {
+            gsm_dbm_history.push_back(local_data.gsmSignal.dbm);
+            
+            if (gsm_dbm_history.size() > 100) {
+                gsm_dbm_history.erase(gsm_dbm_history.begin());
+            }
+        }
+        else if (local_data.networkType == "5G_NR") {
+            nr_ssrsrp_history.push_back(local_data.nrSignal.ssRsrp);
+            
+            if (nr_ssrsrp_history.size() > 100) {
+                nr_ssrsrp_history.erase(nr_ssrsrp_history.begin());
+            }
+        }
+        
+        ImGui::Begin("Grafiki signala");
+        
+        // Графики для LTE
+        if (local_data.networkType == "LTE") {
+            if (ImPlot::BeginPlot("RSRP History", ImVec2(-1, 250))) {
+                ImPlot::SetupAxes("Vremia", "RSRP (dBm)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -140, -40);
+                ImPlot::PlotLine("RSRP", lte_rsrp_history.data(), lte_rsrp_history.size());
+                ImPlot::EndPlot();
+            }
+            
+            if (ImPlot::BeginPlot("RSRQ History", ImVec2(-1, 250))) {
+                ImPlot::SetupAxes("Vremia", "RSRQ (dB)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -20, -3);
+                ImPlot::PlotLine("RSRQ", lte_rsrq_history.data(), lte_rsrq_history.size());
+                ImPlot::EndPlot();
+            }
+        }
+        // Графики для GSM
+        else if (local_data.networkType == "GSM") {
+            if (ImPlot::BeginPlot("Signal Strength History", ImVec2(-1, 300))) {
+                ImPlot::SetupAxes("Vremia", "Signal (dBm)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -120, -30);
+                ImPlot::PlotLine("DBM", gsm_dbm_history.data(), gsm_dbm_history.size());
+                ImPlot::EndPlot();
+            }
+        }
+        // Графики для 5G NR
+        else if (local_data.networkType == "5G_NR") {
+            if (ImPlot::BeginPlot("SS-RSRP History", ImVec2(-1, 300))) {
+                ImPlot::SetupAxes("Vremia", "SS-RSRP (dBm)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -140, -40);
+                ImPlot::PlotLine("SS-RSRP", nr_ssrsrp_history.data(), nr_ssrsrp_history.size());
+                ImPlot::EndPlot();
+            }
+        }
+        // Если нет данных о сети
+        else {
+            ImGui::Text("Net dannyh o seti dlya postroenia grafika");
+        }
+        
+        ImGui::End();
+    }
 // 3.3) Отправляем на рендер;
         ImGui::Render();
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);

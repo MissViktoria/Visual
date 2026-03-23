@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var bGoToPlayerActivity: Button
     private lateinit var bGoToLocationActivity: Button
 
+    private lateinit var bGoToServiceActivity: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         bGoToCalculator = findViewById<Button>(R.id.bGoToCalculator)
         bGoToPlayerActivity = findViewById<Button>(R.id.bGoToPlayerActivity)
         bGoToLocationActivity = findViewById<Button>(R.id.bGoToLocationActivity)
+        bGoToServiceActivity = findViewById<Button>(R.id.bGoToServiceActivity)
     }
 
     override fun onResume() {
@@ -36,6 +39,11 @@ class MainActivity : AppCompatActivity() {
         bGoToLocationActivity.setOnClickListener({
             val locationIntent = Intent(this, LocationActivity::class.java)
             startActivity(locationIntent)
+        });
+
+        bGoToServiceActivity.setOnClickListener({
+            val serviceIntent= Intent(this, ServiceActivity::class.java)
+            startActivity(serviceIntent)
         });
         }
     }

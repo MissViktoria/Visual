@@ -8,6 +8,7 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,9 +25,9 @@ import java.util.*
 class LocationActivity : AppCompatActivity(), LocationListener {
 
     private val TAG = "LocationApp"
-    private val SERVER_IP = "192.168.221.115"
+    private val SERVER_IP = "192.168.1.42"
     private val SERVER_PORT = "7777"
-    private val UPDATE_TIME = 1000L // 1 секунда
+    private val UPDATE_TIME = 1000L
 
     // UI элементы
     private lateinit var tvLat: TextView
@@ -48,7 +49,6 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     private var currentLocation: Location? = null
     private val deviceId = "phone_${UUID.randomUUID().toString().substring(0, 6)}"
     private var sendRunnable: Runnable? = null
-    private var lastUpdateTime = System.currentTimeMillis() // Время последнего обновления
 
     // ZMQ
     private var zmqSocket: org.zeromq.ZMQ.Socket? = null
@@ -59,15 +59,12 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
 
-        // Находим все view
         initViews()
         setupButtons()
 
-        // Получаем сервисы
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 
-        // Запрашиваем разрешения
         requestPermissions()
     }
 
@@ -75,12 +72,11 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         tvLat = findViewById(R.id.tv_latitude)
         tvLon = findViewById(R.id.tv_longitude)
         tvAlt = findViewById(R.id.tv_altitude)
-        tvTime = findViewById(R.id.tv_time)  // Используем существующий tv_time вместо tv_speed
+        tvTime = findViewById(R.id.tv_time)
         tvNetwork = findViewById(R.id.tv_cell_info)
         btnStart = findViewById(R.id.btn_get_location)
         btnBack = findViewById(R.id.btn_back)
 
-        // Создаем кнопку СТОП
         btnStop = Button(this).apply {
             text = "СТОП"
             layoutParams = LinearLayout.LayoutParams(
@@ -92,7 +88,6 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             isEnabled = false
         }
 
-        // Добавляем кнопку в layout
         val layout = findViewById<LinearLayout>(R.id.main)
         layout.addView(btnStop)
     }
@@ -116,7 +111,7 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         Thread {
             try {
                 zmqContext = org.zeromq.ZMQ.context(1)
-                zmqSocket = zmqContext?.socket(org.zeromq.ZMQ.PUSH) // Используем PUSH вместо REQ
+                zmqSocket = zmqContext?.socket(org.zeromq.ZMQ.PUSH)
                 val address = "tcp://$SERVER_IP:$SERVER_PORT"
                 zmqSocket?.connect(address)
                 zmqSocket?.setSendTimeOut(3000)
@@ -145,7 +140,6 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             Manifest.permission.ACCESS_COARSE_LOCATION,
             Manifest.permission.READ_PHONE_STATE
         )
-
         ActivityCompat.requestPermissions(this, permissions, 1)
     }
 
@@ -158,21 +152,17 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     @SuppressLint("MissingPermission")
     private fun startLocationUpdates() {
         try {
-            locationManager.removeUpdates(this) // Удаляем старые обновления
-
+            locationManager.removeUpdates(this)
             locationManager.requestLocationUpdates(
                 LocationManager.GPS_PROVIDER,
                 1000L,
                 1f,
                 this
             )
-
-            // Получаем начальное местоположение
             currentLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
             if (currentLocation != null) {
                 updateUI(currentLocation!!)
             }
-
         } catch (e: SecurityException) {
             Toast.makeText(this, "Нет разрешения на геолокацию", Toast.LENGTH_LONG).show()
         }
@@ -201,10 +191,8 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         btnStart.isEnabled = false
         btnStop.isEnabled = true
 
-        // Сразу отправляем первые данные
         sendData()
 
-        // Создаем и запускаем периодическую отправку
         sendRunnable = object : Runnable {
             override fun run() {
                 if (isSending) {
@@ -231,32 +219,20 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     private fun sendData() {
         Thread {
             try {
-                // 1. Получаем местоположение
                 val location = currentLocation ?: return@Thread
-
-                // 2. Получаем информацию о сети
                 val cellInfo = getSimpleCellInfo()
-
-                // 3. Создаем JSON для отправки
                 val jsonData = createJson(location, cellInfo)
-
-                // 4. Отправляем на сервер (PUSH не требует ответа)
                 val success = zmqSocket?.send(jsonData.toByteArray(), 0) ?: false
 
-                // 5. Обновляем UI
                 runOnUiThread {
                     val time = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
                     if (success) {
                         tvNetwork.text = "Отправлено: $time"
-                        Log.d(TAG, "Данные успешно отправлены: $time")
                     } else {
                         tvNetwork.text = "Ошибка отправки: $time"
-                        Log.e(TAG, "Не удалось отправить данные")
-                        // Попытка переподключения при ошибке
                         reconnectIfNeeded()
                     }
                 }
-
             } catch (e: Exception) {
                 Log.e(TAG, "Ошибка отправки: ${e.message}")
                 runOnUiThread {
@@ -277,10 +253,8 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     private fun getSimpleCellInfo(): JSONObject {
         return try {
             val allCells = telephonyManager.allCellInfo
-
             if (allCells != null && allCells.isNotEmpty()) {
                 val firstCell = allCells[0]
-
                 when (firstCell) {
                     is CellInfoLte -> createLteJson(firstCell)
                     is CellInfoGsm -> createGsmJson(firstCell)
@@ -289,7 +263,6 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             } else {
                 createStubJson()
             }
-
         } catch (e: Exception) {
             Log.e(TAG, "Ошибка получения информации о сети: ${e.message}")
             createStubJson()
@@ -305,15 +278,26 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             val ci = cell.cellIdentity
             val cs = cell.cellSignalStrength
 
-            identity.put("cellId", try { ci.ci } catch (e: Exception) { 0 })
+            // CellIdentityLte - все доступные поля
+            identity.put("earfcn", try { ci.earfcn } catch (e: Exception) { 0 })
             identity.put("mcc", try { ci.mccString?.toIntOrNull() ?: 0 } catch (e: Exception) { 0 })
             identity.put("mnc", try { ci.mncString?.toIntOrNull() ?: 0 } catch (e: Exception) { 0 })
+            identity.put("pci", try { ci.pci } catch (e: Exception) { 0 })
+            identity.put("tac", try { ci.tac } catch (e: Exception) { 0 })
+            identity.put("cellIdentity", try { ci.ci.toString() } catch (e: Exception) { "" })
 
-            signal.put("rsrp", cs.rsrp)
-            signal.put("dbm", cs.dbm)
+            // CellSignalStrengthLte - все доступные поля
+            signal.put("asuLevel", try { cs.asuLevel } catch (e: Exception) { 0 })
+            signal.put("cqi", try { cs.cqi } catch (e: Exception) { 0 })
+            signal.put("rsrp", try { cs.rsrp } catch (e: Exception) { -140 })
+            signal.put("rsrq", try { cs.rsrq } catch (e: Exception) { -20 })
+
+            val rssiValue = try { cs.rssi } catch (e: Exception) { -120 }
+            signal.put("rssi", if (rssiValue == Integer.MAX_VALUE) -120 else rssiValue)
+            signal.put("rssnr", try { cs.rssnr } catch (e: Exception) { 0 })
 
             json.put("networkType", "LTE")
-            json.put("cellIdentity", identity)
+            json.put("identity", identity)
             json.put("signalStrength", signal)
 
         } catch (e: Exception) {
@@ -332,14 +316,20 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             val ci = cell.cellIdentity
             val cs = cell.cellSignalStrength
 
-            identity.put("cellId", ci.cid)
+            // CellIdentityGsm
+            identity.put("bsic", try { ci.bsic } catch (e: Exception) { 0 })
+            identity.put("arfcn", try { ci.arfcn } catch (e: Exception) { 0 })
+            identity.put("lac", try { ci.lac } catch (e: Exception) { 0 })
             identity.put("mcc", try { ci.mccString?.toIntOrNull() ?: 0 } catch (e: Exception) { 0 })
             identity.put("mnc", try { ci.mncString?.toIntOrNull() ?: 0 } catch (e: Exception) { 0 })
+            identity.put("cellIdentity", try { ci.cid.toString() } catch (e: Exception) { "" })
 
-            signal.put("dbm", cs.dbm)
+            // CellSignalStrengthGsm
+            signal.put("dbm", try { cs.dbm } catch (e: Exception) { -120 })
+            signal.put("rssi", try { cs.rssi } catch (e: Exception) { 0 })
 
             json.put("networkType", "GSM")
-            json.put("cellIdentity", identity)
+            json.put("identity", identity)
             json.put("signalStrength", signal)
 
         } catch (e: Exception) {
@@ -354,15 +344,16 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         val identity = JSONObject()
         val signal = JSONObject()
 
-        identity.put("cellId", 0)
         identity.put("mcc", 0)
         identity.put("mnc", 0)
+        identity.put("pci", 0)
+        identity.put("tac", 0)
 
-        signal.put("rsrp", 0)
-        signal.put("dbm", 0)
+        signal.put("rsrp", -140)
+        signal.put("rsrq", -20)
 
         json.put("networkType", "UNKNOWN")
-        json.put("cellIdentity", identity)
+        json.put("identity", identity)
         json.put("signalStrength", signal)
 
         return json
@@ -371,15 +362,12 @@ class LocationActivity : AppCompatActivity(), LocationListener {
     private fun createJson(location: Location, cellInfo: JSONObject): String {
         val json = JSONObject()
 
-        // Location data
         val locationObj = JSONObject().apply {
             put("latitude", location.latitude)
             put("longitude", location.longitude)
             put("altitude", location.altitude)
             put("timestamp", location.time)
-            put("speed", location.speed)
             put("accuracy", location.accuracy)
-            put("bearing", location.bearing)
         }
 
         json.put("location", locationObj)
@@ -406,7 +394,6 @@ class LocationActivity : AppCompatActivity(), LocationListener {
             tvLon.text = String.format(Locale.US, "Долгота: %.6f", location.longitude)
             tvAlt.text = String.format(Locale.US, "Высота: %.1f м", location.altitude)
 
-            // Время всегда берем с GPS
             val locationTime = Date(location.time)
             val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
             tvTime.text = "Время GPS: ${timeFormat.format(locationTime)}"
@@ -419,10 +406,8 @@ class LocationActivity : AppCompatActivity(), LocationListener {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
         if (requestCode == 1) {
             val allGranted = grantResults.all { it == PackageManager.PERMISSION_GRANTED }
-
             if (allGranted) {
                 startLocationUpdates()
                 connectToServer()
@@ -434,38 +419,29 @@ class LocationActivity : AppCompatActivity(), LocationListener {
 
     override fun onProviderEnabled(provider: String) {
         Log.d(TAG, "GPS включен: $provider")
-        runOnUiThread {
-            tvNetwork.text = "GPS включен"
-        }
+        runOnUiThread { tvNetwork.text = "GPS включен" }
     }
 
     override fun onProviderDisabled(provider: String) {
         Log.d(TAG, "GPS выключен: $provider")
         runOnUiThread {
             tvNetwork.text = "GPS выключен"
-            if (isSending) {
-                stopSending()
-            }
+            if (isSending) stopSending()
         }
     }
 
-    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
-        // Можно оставить пустым
-    }
+    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
 
     override fun onDestroy() {
         super.onDestroy()
         isSending = false
         handler.removeCallbacksAndMessages(null)
         locationManager.removeUpdates(this)
-
         try {
             zmqSocket?.close()
             zmqContext?.term()
         } catch (e: Exception) {
             Log.e(TAG, "Ошибка при закрытии ZMQ: ${e.message}")
         }
-
-        Log.d(TAG, "Активность уничтожена")
     }
 }
