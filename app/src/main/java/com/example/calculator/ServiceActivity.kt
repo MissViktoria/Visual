@@ -29,6 +29,7 @@ class ServiceActivity : AppCompatActivity() {
     private lateinit var tvStatus: TextView
     private lateinit var btnStartService: Button
     private lateinit var btnStopService: Button
+    private lateinit var btnForceSend: Button
     private lateinit var btnBack: Button
 
     private var isServiceRunning = false
@@ -80,9 +81,11 @@ class ServiceActivity : AppCompatActivity() {
         tvStatus = findViewById(R.id.tv_status)
         btnStartService = findViewById(R.id.btn_start_service)
         btnStopService = findViewById(R.id.btn_stop_service)
+        btnForceSend = findViewById(R.id.btn_force_send)
         btnBack = findViewById(R.id.btn_back)
 
         btnStopService.isEnabled = false
+        btnForceSend.isEnabled = false
     }
 
     private fun setupButtons() {
@@ -97,6 +100,8 @@ class ServiceActivity : AppCompatActivity() {
         }
 
         btnStopService.setOnClickListener { stopCellDataService() }
+
+        btnForceSend.setOnClickListener { forceSendPendingData() }
     }
 
     private fun startCellDataService() {
@@ -106,6 +111,7 @@ class ServiceActivity : AppCompatActivity() {
             isServiceRunning = true
             btnStartService.isEnabled = false
             btnStopService.isEnabled = true
+            btnForceSend.isEnabled = true
             tvStatus.text = "Статус: запуск сервиса..."
             Toast.makeText(this, "Сервис сбора данных запущен", Toast.LENGTH_SHORT).show()
         }
@@ -118,9 +124,21 @@ class ServiceActivity : AppCompatActivity() {
             isServiceRunning = false
             btnStartService.isEnabled = true
             btnStopService.isEnabled = false
+            btnForceSend.isEnabled = false
             tvStatus.text = "Статус: сервис остановлен"
             Toast.makeText(this, "Сервис сбора данных остановлен", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun forceSendPendingData() {
+        if (!isServiceRunning) {
+            Toast.makeText(this, "Сервис не запущен", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val intent = Intent("ForceSendPendingData")
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+        Toast.makeText(this, "Принудительная отправка данных из БД...", Toast.LENGTH_SHORT).show()
     }
 
     private fun updateUIWithData(data: String) {
@@ -130,46 +148,61 @@ class ServiceActivity : AppCompatActivity() {
             // Обновляем местоположение
             val location = json.getJSONObject("location")
             runOnUiThread {
-                tvLatitude.text = String.format(Locale.US, "%.6f", location.getDouble("latitude"))
-                tvLongitude.text = String.format(Locale.US, "%.6f", location.getDouble("longitude"))
-                tvAltitude.text = String.format(Locale.US, "%.1f м", location.getDouble("altitude"))
+                tvLatitude.text = String.format(Locale.US, "%.6f", location.optDouble("latitude", 0.0))
+                tvLongitude.text = String.format(Locale.US, "%.6f", location.optDouble("longitude", 0.0))
+                tvAltitude.text = String.format(Locale.US, "%.1f м", location.optDouble("altitude", 0.0))
 
-                val time = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
-                    .format(Date(location.getLong("timestamp")))
-                tvTime.text = time
+                val time = location.optLong("timestamp", 0)
+                if (time > 0) {
+                    val date = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+                        .format(Date(time))
+                    tvTime.text = date
+                } else {
+                    tvTime.text = "Н/Д"
+                }
             }
 
             // Обновляем информацию о сети
             val cellInfo = json.getJSONObject("cellInfo")
-            val networkType = cellInfo.getString("networkType")
-            val identity = cellInfo.getJSONObject("identity")
-            val signal = cellInfo.getJSONObject("signalStrength")
+            val networkType = cellInfo.optString("networkType", "UNKNOWN")
 
             runOnUiThread {
+                tvNetwork.text = networkType
+
                 when (networkType) {
                     "LTE" -> {
-                        tvNetwork.text = "LTE"
-                        val rsrp = signal.getInt("rsrp")
-                        val rsrq = signal.getInt("rsrq")
-                        val pci = identity.getInt("pci")
-                        val tac = identity.getInt("tac")
-                        tvSignal.text = "RSRP: $rsrp dBm | RSRQ: $rsrq dB | PCI: $pci | TAC: $tac"
+                        val signal = cellInfo.optJSONObject("signalStrength")
+                        val identity = cellInfo.optJSONObject("identity")
+
+                        if (signal != null && identity != null) {
+                            val rsrp = signal.optInt("rsrp", -140)
+                            val rsrq = signal.optInt("rsrq", -20)
+                            val pci = identity.optInt("pci", 0)
+                            val tac = identity.optInt("tac", 0)
+                            tvSignal.text = "RSRP: $rsrp dBm | RSRQ: $rsrq dB | PCI: $pci | TAC: $tac"
+                        } else {
+                            tvSignal.text = "Нет данных о сигнале LTE"
+                        }
                     }
                     "GSM" -> {
-                        tvNetwork.text = "GSM"
-                        val dbm = signal.getInt("dbm")
-                        val lac = identity.getInt("lac")
-                        tvSignal.text = "Уровень: $dbm dBm | LAC: $lac"
+                        val signal = cellInfo.optJSONObject("signalStrength")
+                        val identity = cellInfo.optJSONObject("identity")
+
+                        if (signal != null && identity != null) {
+                            val dbm = signal.optInt("dbm", -120)
+                            val lac = identity.optInt("lac", 0)
+                            tvSignal.text = "Уровень: $dbm dBm | LAC: $lac"
+                        } else {
+                            tvSignal.text = "Нет данных о сигнале GSM"
+                        }
                     }
                     else -> {
-                        tvNetwork.text = networkType
-                        tvSignal.text = "Нет данных о сигнале"
+                        tvSignal.text = "Нет данных о сигнале (сеть: $networkType)"
                     }
                 }
             }
 
         } catch (e: Exception) {
-            // Игнорируем ошибки парсинга
         }
     }
 
@@ -208,6 +241,5 @@ class ServiceActivity : AppCompatActivity() {
         super.onDestroy()
         LocalBroadcastManager.getInstance(this).unregisterReceiver(dataReceiver)
         LocalBroadcastManager.getInstance(this).unregisterReceiver(statusReceiver)
-        // Не останавливаем сервис при закрытии Activity
     }
 }

@@ -16,14 +16,44 @@
 #include <atomic>
 #include <vector>
 #include <map>
+#include <libpq-fe.h>
+#include <filesystem>
 
 #include "backends/imgui_impl_opengl3.h"
 #include "backends/imgui_impl_sdl2.h"
 #include "imgui.h"
 #include "implot.h"
 
+#include "../include/TileManager.h"
+
 using namespace std;
 using json = nlohmann::json;
+
+#define HOST "localhost"
+#define PORT "5432"
+#define DB_NAME "phone_db"
+#define DB_USER "may"
+#define DB_USER_PASSWORD "maymay"
+
+
+
+// Функции преобразования координат
+static double PI = 3.14159265358979323846;
+static double RAD = PI / 180.0;
+static double DEG = 180.0 / PI;
+
+
+
+// Структура для хранения данных одной соты
+struct CellMeasurement {
+    int pci = 0;
+    int rsrp = -140;
+    int rsrq = -20;
+    int sinr = 0;
+    string networkType = "LTE";
+};
+
+
 
 // Расширенная структура данных с телефона
 struct CellIdentityLte {
@@ -107,7 +137,10 @@ struct PhoneData {
     // Трафик
     long long totalTxBytes = 0;
     long long totalRxBytes = 0;
-    vector<pair<string, long long>> topApps; // название приложения -> байты
+    vector<pair<string, long long>> topApps; // название приложения - байты
+
+    // Список всех сот
+    vector<CellMeasurement> allCells;
     
     string deviceId = "unknown";
 };
@@ -139,6 +172,9 @@ void updatePhoneData(const json& data) {
     if (data.contains("cellInfo")) {
         const auto& cell = data["cellInfo"];
         new_data.networkType = cell.value("networkType", "UNKNOWN");
+
+        // Заполняем список сот
+        new_data.allCells.clear();
         
         // LTE данные
         if (new_data.networkType == "LTE" && cell.contains("identity")) {
@@ -149,7 +185,7 @@ void updatePhoneData(const json& data) {
             new_data.lteIdentity.mnc = identity.value("mnc", 0);
             new_data.lteIdentity.pci = identity.value("pci", 0);
             new_data.lteIdentity.tac = identity.value("tac", 0);
-            new_data.lteIdentity.cellIdentity = identity.value("cellIdentity", "");
+            new_data.lteIdentity.cellIdentity = identity.value("cellIdentity", ""); 
         }
         
         if (new_data.networkType == "LTE" && cell.contains("signalStrength")) {
@@ -161,7 +197,33 @@ void updatePhoneData(const json& data) {
             new_data.lteSignal.rssi = signal.value("rssi", -120);
             new_data.lteSignal.rssnr = signal.value("rssnr", 0);
             new_data.lteSignal.timingAdvance = signal.value("timingAdvance", 0);
+
+
+            // Добавляем текущ. соту в список
+            CellMeasurement currentCell;
+            currentCell.pci = new_data.lteIdentity.pci;
+            currentCell.rsrp = new_data.lteSignal.rsrp;
+            currentCell.rsrq = new_data.lteSignal.rsrq;
+            currentCell.sinr = new_data.lteSignal.rssnr;
+            currentCell.networkType = "LTE";
+            new_data.allCells.push_back(currentCell);
+            
+            // если есть сосдние соты
+            if (cell.contains("neighboringCells")) {
+                for (const auto& neighbor : cell["neighboringCells"]) {
+                    CellMeasurement neighborCell;
+                    neighborCell.pci = neighbor.value("pci", 0);
+                    neighborCell.rsrp = neighbor.value("rsrp", -140);
+                    neighborCell.rsrq = neighbor.value("rsrq", -20);
+                    neighborCell.sinr = neighbor.value("sinr", 0);
+                    neighborCell.networkType = "LTE";
+                    new_data.allCells.push_back(neighborCell);
+                }
+            }
+
         }
+        
+
         
         // GSM данные
         if (new_data.networkType == "GSM" && cell.contains("identity")) {
@@ -236,6 +298,8 @@ private:
     string data_file;
     int counter;
     atomic<bool> running{true};
+    
+    PGconn* db_conn = nullptr;
 
     void log(const string& level, const string& message) {
         auto now = chrono::system_clock::now();
@@ -260,44 +324,6 @@ private:
         return ss.str();
     }
 
-    // void updatePhoneData(const json& data) {
-    //     PhoneData new_data;
-        
-    //     if (data.contains("location")) {
-    //         new_data.latitude = data["location"].value("latitude", 55.7558);
-    //         new_data.longitude = data["location"].value("longitude", 37.1234);
-    //         new_data.altitude = data["location"].value("altitude", 0.0);
-            
-    //         long timestamp = data["location"].value("timestamp", 0L);
-    //         if (timestamp > 0) {
-    //             time_t seconds = timestamp / 1000;
-    //             char buffer[80];
-    //             strftime(buffer, sizeof(buffer), "%H:%M:%S", localtime(&seconds));
-    //             new_data.time = string(buffer);
-    //         }
-    //     }
-        
-    //     if (data.contains("cellInfo")) {
-    //         new_data.network = data["cellInfo"].value("networkType", "LTE");
-            
-    //         if (data["cellInfo"].contains("signalStrength")) {
-    //             const auto& signal = data["cellInfo"]["signalStrength"];
-    //             if (new_data.network == "LTE") {
-    //                 new_data.signal = signal.value("rsrp", -65);
-    //             } else if (new_data.network == "GSM") {
-    //                 new_data.signal = signal.value("dbm", -65);
-    //             } else if (new_data.network == "5G_NR") {
-    //                 new_data.signal = signal.value("ssRsrp", -65);
-    //             }
-    //         }
-    //     }
-        
-    //     new_data.deviceId = data.value("deviceId", "unknown");
-        
-    //     lock_guard<mutex> lock(g_data_mutex);
-    //     g_phone_data = new_data;
-    // }
-
 public:
     ZmqServer(string h = "*", int p = 7777) 
         : host(h), port(p), context(1), socket(context, ZMQ_PULL), counter(0) {
@@ -312,6 +338,81 @@ public:
         }
     }
 
+
+
+    bool saveToDatabase(const PhoneData& data) {
+        if (!db_conn || PQstatus(db_conn) != CONNECTION_OK) {
+            return false;
+        }
+        
+        // Текущее время в миллисекундах
+        auto now = chrono::system_clock::now();
+        long long timestamp = chrono::duration_cast<chrono::milliseconds>(
+            now.time_since_epoch()
+        ).count();
+        
+        // Буферы для строк
+        char ts_str[32], lat_str[32], lon_str[32], alt_str[32], acc_str[32];
+        char lte_band_str[16], lte_earfcn_str[16], lte_mcc_str[16], lte_mnc_str[16];
+        char lte_pci_str[16], lte_tac_str[16];
+        char lte_asu_str[16], lte_cqi_str[16], lte_rsrp_str[16], lte_rsrq_str[16];
+        char lte_rssi_str[16], lte_rssnr_str[16], lte_ta_str[16];
+        
+        snprintf(ts_str, sizeof(ts_str), "%lld", timestamp);
+        snprintf(lat_str, sizeof(lat_str), "%f", data.latitude);
+        snprintf(lon_str, sizeof(lon_str), "%f", data.longitude);
+        snprintf(alt_str, sizeof(alt_str), "%f", data.altitude);
+        snprintf(acc_str, sizeof(acc_str), "%f", data.accuracy);
+        
+        // LTE Identity
+        snprintf(lte_band_str, sizeof(lte_band_str), "%d", data.lteIdentity.band);
+        snprintf(lte_earfcn_str, sizeof(lte_earfcn_str), "%d", data.lteIdentity.earfcn);
+        snprintf(lte_mcc_str, sizeof(lte_mcc_str), "%d", data.lteIdentity.mcc);
+        snprintf(lte_mnc_str, sizeof(lte_mnc_str), "%d", data.lteIdentity.mnc);
+        snprintf(lte_pci_str, sizeof(lte_pci_str), "%d", data.lteIdentity.pci);
+        snprintf(lte_tac_str, sizeof(lte_tac_str), "%d", data.lteIdentity.tac);
+        
+        // LTE Signal
+        snprintf(lte_asu_str, sizeof(lte_asu_str), "%d", data.lteSignal.asuLevel);
+        snprintf(lte_cqi_str, sizeof(lte_cqi_str), "%d", data.lteSignal.cqi);
+        snprintf(lte_rsrp_str, sizeof(lte_rsrp_str), "%d", data.lteSignal.rsrp);
+        snprintf(lte_rsrq_str, sizeof(lte_rsrq_str), "%d", data.lteSignal.rsrq);
+        snprintf(lte_rssi_str, sizeof(lte_rssi_str), "%d", data.lteSignal.rssi);
+        snprintf(lte_rssnr_str, sizeof(lte_rssnr_str), "%d", data.lteSignal.rssnr);
+        snprintf(lte_ta_str, sizeof(lte_ta_str), "%d", data.lteSignal.timingAdvance);
+        
+        // ПОЛНЫЙ SQL запрос со ВСЕМИ полями
+        const char* query = 
+            "INSERT INTO data ("
+            "timestamp, latitude, longitude, altitude, accuracy, location_time, network_type, "
+            "lte_band, lte_earfcn, lte_mcc, lte_mnc, lte_pci, lte_tac, lte_cell_identity, "
+            "lte_asu_level, lte_cqi, lte_rsrp, lte_rsrq, lte_rssi, lte_rssnr, lte_timing_advance"
+            ") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)";
+        
+        const char* params[] = {
+            ts_str, lat_str, lon_str, alt_str, acc_str,
+            data.time.c_str(), data.networkType.c_str(),
+            lte_band_str, lte_earfcn_str, lte_mcc_str, lte_mnc_str,
+            lte_pci_str, lte_tac_str, data.lteIdentity.cellIdentity.c_str(),
+            lte_asu_str, lte_cqi_str, lte_rsrp_str, lte_rsrq_str,
+            lte_rssi_str, lte_rssnr_str, lte_ta_str
+        };
+        
+        PGresult* res = PQexecParams(db_conn, query, 21, NULL, params, NULL, NULL, 0);
+        
+        if (PQresultStatus(res) != PGRES_COMMAND_OK) {
+            log("ERROR", string("Ошибка вставки: ") + PQresultErrorMessage(res));
+            PQclear(res);
+            return false;
+        }
+        
+        PQclear(res);
+        return true;
+    }
+
+
+
+
     void start() {
         try {
             string address = "tcp://" + host + ":" + to_string(port);
@@ -320,6 +421,16 @@ public:
             log("INFO", "ZMQ сервер запущен на " + address);
             log("INFO", "Ожидание данных от Android...");
             
+            const char* conn_info = "host=" HOST " port=" PORT " dbname=" DB_NAME 
+                                    " user=" DB_USER " password=" DB_USER_PASSWORD;
+            db_conn = PQconnectdb(conn_info);
+            
+            if (PQstatus(db_conn) != CONNECTION_OK) {
+                log("ERROR", string("Ошибка подключения к БД: ") + PQerrorMessage(db_conn));
+            } else {
+                log("INFO", "Подключение к PostgreSQL УСПЕШНО!");
+            }
+
             cout << "\n" << string(80, '=') << endl;
             cout << "СЕРВЕР ДАННЫХ МЕСТОПОЛОЖЕНИЯ (PUSH/PULL режим)" << endl;
             cout << "Порт: " << port << endl;
@@ -348,6 +459,23 @@ public:
                     // Обновляем данные для GUI
                     ::updatePhoneData(data);
 
+
+                    PhoneData current_data;
+                    {
+                        lock_guard<mutex> lock(g_data_mutex);
+                        current_data = g_phone_data;
+                    }
+                    
+                    if (db_conn && PQstatus(db_conn) == CONNECTION_OK) {
+                        if (saveToDatabase(current_data)) {
+                            log("INFO", "Данные сохранены в PostgreSQL");
+                        } else {
+                            log("ERROR", "Ошибка сохранения в PostgreSQL");
+                        }
+                    }
+
+                    
+
                 } catch (const json::parse_error& e) {
                     log("ERROR", string("Ошибка декодирования JSON: ") + e.what());
                 } catch (const exception& e) {
@@ -362,6 +490,12 @@ public:
     void stop() {
         running = false;
         socket.close();
+
+        if (db_conn) {
+        PQfinish(db_conn);
+        db_conn = nullptr;
+        log("INFO", "Соединение с PostgreSQL закрыто");
+    }
     }
 
     void saveData(const json& data) {
@@ -449,6 +583,28 @@ void signalHandler(int signum) {
 }
 
 void run_gui(){
+
+
+    // Создаем менеджер тайлов
+    static TileManager tileManager;
+    
+    // Переменные для карты
+    static double mapLat = 55.051661;   // твоя широта
+    static double mapLon = 82.914767;   // твоя долгота  
+    static int mapZoom = 16;
+    static bool dragging = false;
+    static ImVec2 lastMousePos;
+    static GLuint mapTexture = 0;
+
+    // Хранилище текстур для тайлов 
+    static map<string, GLuint> textureCache;
+
+    // Хранилище истории сигналов для всех PCI
+    static map<int, vector<float>> rsrpHistoryByPci;  // PCI - история RSRP
+    static map<int, vector<float>> sinrHistoryByPci;  // PCI - история SINR
+
+
+
     // 1) Инициализация SDL
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
     SDL_Window* window = SDL_CreateWindow(
@@ -608,12 +764,13 @@ void run_gui(){
         ImGui::End();
     }
 
-        //График изменения сигнала - поддержка всех типов сетей
+        //График изменения сигнала
     {
         static vector<float> lte_rsrp_history;
         static vector<float> lte_rsrq_history;
         static vector<float> gsm_dbm_history;
         static vector<float> nr_ssrsrp_history;
+        static vector<float> lte_sinr_history;
         
         PhoneData local_data;
         {
@@ -625,11 +782,13 @@ void run_gui(){
         if (local_data.networkType == "LTE") {
             lte_rsrp_history.push_back(local_data.lteSignal.rsrp);
             lte_rsrq_history.push_back(local_data.lteSignal.rsrq);
+            lte_sinr_history.push_back(local_data.lteSignal.rssnr);
             
             // Ограничиваем размер истории (последние 100 значений)
             if (lte_rsrp_history.size() > 100) {
                 lte_rsrp_history.erase(lte_rsrp_history.begin());
                 lte_rsrq_history.erase(lte_rsrq_history.begin());
+                lte_sinr_history.erase(lte_sinr_history.begin());
             }
         }
         else if (local_data.networkType == "GSM") {
@@ -646,6 +805,26 @@ void run_gui(){
                 nr_ssrsrp_history.erase(nr_ssrsrp_history.begin());
             }
         }
+
+        // Обновляем историю для каждой соты
+        for (const auto& cell : local_data.allCells) {
+            if (cell.pci > 0) {
+                // RSRP история
+                rsrpHistoryByPci[cell.pci].push_back(cell.rsrp);
+                if (rsrpHistoryByPci[cell.pci].size() > 100) {
+                    rsrpHistoryByPci[cell.pci].erase(rsrpHistoryByPci[cell.pci].begin());
+                }
+                
+                // SINR история (только для LTE/5G)
+                if (cell.sinr != 0) {
+                    sinrHistoryByPci[cell.pci].push_back(cell.sinr);
+                    if (sinrHistoryByPci[cell.pci].size() > 100) {
+                        sinrHistoryByPci[cell.pci].erase(sinrHistoryByPci[cell.pci].begin());
+                    }
+                }
+            }
+        }
+
         
         ImGui::Begin("Grafiki signala");
         
@@ -662,6 +841,14 @@ void run_gui(){
                 ImPlot::SetupAxes("Vremia", "RSRQ (dB)");
                 ImPlot::SetupAxisLimits(ImAxis_Y1, -20, -3);
                 ImPlot::PlotLine("RSRQ", lte_rsrq_history.data(), lte_rsrq_history.size());
+                ImPlot::EndPlot();
+            }
+
+            //График SINR
+            if (ImPlot::BeginPlot("SINR History", ImVec2(-1, 200))) {
+                ImPlot::SetupAxes("Vremia", "SINR (dB)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -10, 35);
+                ImPlot::PlotLine("SINR", lte_sinr_history.data(), lte_sinr_history.size());
                 ImPlot::EndPlot();
             }
         }
@@ -683,6 +870,66 @@ void run_gui(){
                 ImPlot::EndPlot();
             }
         }
+
+
+
+
+        // График RSRP для всех PCI
+        if (!rsrpHistoryByPci.empty()) {
+            if (ImPlot::BeginPlot("RSRP po PCI", ImVec2(-1, 300))) {
+                ImPlot::SetupAxes("Vremia", "RSRP (dBm)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -140, -40);
+                
+                // Рисуем линию для каждого PCI
+                for (auto& [pci, history] : rsrpHistoryByPci) {
+                    if (!history.empty()) {
+                        string label = "PCI " + to_string(pci);
+                        ImPlot::PlotLine(label.c_str(), history.data(), history.size());
+                    }
+                }
+                
+                ImPlot::EndPlot();
+            }
+        } else {
+            ImGui::Text("Net dannyh o sotah dlya grafika RSRP");
+        }
+        
+        // График SINR для всех PCI
+        bool hasSinrData = false;
+        for (const auto& [pci, history] : sinrHistoryByPci) {
+            if (!history.empty()) {
+                hasSinrData = true;
+                break;
+            }
+        }
+        
+        if (hasSinrData) {
+            if (ImPlot::BeginPlot("SINR po PCI", ImVec2(-1, 300))) {
+                ImPlot::SetupAxes("Vremia", "SINR (dB)");
+                ImPlot::SetupAxisLimits(ImAxis_Y1, -10, 35);
+                
+                for (auto& [pci, history] : sinrHistoryByPci) {
+                    if (!history.empty()) {
+                        string label = "PCI " + to_string(pci);
+                        ImPlot::PlotLine(label.c_str(), history.data(), history.size());
+                    }
+                }
+                
+                ImPlot::EndPlot();
+            }
+        }
+        
+        // Дополнительно показываем текущие значения всех сот
+        if (!local_data.allCells.empty()) {
+            ImGui::Separator();
+            ImGui::Text("Tekushie znachenia po sotam:");
+            for (const auto& cell : local_data.allCells) {
+                ImGui::Text("  PCI %d: RSRP=%d dBm, RSRQ=%d dB, SINR=%d dB",
+                        cell.pci, cell.rsrp, cell.rsrq, cell.sinr);
+            }
+        }
+
+
         // Если нет данных о сети
         else {
             ImGui::Text("Net dannyh o seti dlya postroenia grafika");
@@ -690,6 +937,123 @@ void run_gui(){
         
         ImGui::End();
     }
+
+
+
+
+    // Новое окно с картой OSM
+    {
+        ImGui::Begin("OpenStreetMap Card", nullptr);
+        
+        // Получаем размеры окна
+        ImVec2 windowPos = ImGui::GetCursorScreenPos();
+        ImVec2 windowSize = ImGui::GetContentRegionAvail();
+        
+        if (windowSize.x > 100 && windowSize.y > 100) {
+            
+            // Обработка колесика мыши для zoom
+            ImGuiIO& io = ImGui::GetIO();
+            if (ImGui::IsWindowHovered()) {
+                float scroll = io.MouseWheel;
+                if (scroll != 0) {
+                    mapZoom += (scroll > 0 ? 1 : -1);
+                    mapZoom = max(0, min(18, mapZoom));
+                }
+                
+                // Перетаскивание карты
+                if (ImGui::IsMouseDragging(ImGuiMouseButton_Left)) {
+                    if (!dragging) {
+                        dragging = true;
+                        lastMousePos = ImGui::GetMousePos();
+                    } else {
+                        ImVec2 delta;
+                        delta.x = ImGui::GetMousePos().x - lastMousePos.x;
+                        delta.y = ImGui::GetMousePos().y - lastMousePos.y;
+                        
+                        // Конвертируем пиксельное смещение в градусы
+                        double lonPerPixel = 360.0 / (1 << mapZoom) / 256.0;
+                        double latPerPixel = 170.0 / (1 << mapZoom) / 256.0;
+                        
+                        mapLon -= delta.x * lonPerPixel;
+                        mapLat += delta.y * latPerPixel;
+                        
+                        // Ограничиваем широту
+                        mapLat = max(-85.0, min(85.0, mapLat));
+                        
+                        lastMousePos = ImGui::GetMousePos();
+                    }
+                } else {
+                    dragging = false;
+                }
+            }
+            
+            // Получаем тайлы для текущей области
+            vector<Tile*> visibleTiles = tileManager.getVisibleTiles(
+                mapLat, mapLon, mapZoom, 
+                (int)windowSize.x, (int)windowSize.y
+            );
+            
+            // Рисуем каждый тайл
+            for (Tile* tile : visibleTiles) {
+                if (tile && tile->loaded && !tile->rgbaData.empty()) {
+                    
+                    string tileKey = to_string(tile->z) + "_" + to_string(tile->x) + "_" + to_string(tile->y);
+                    
+                    // Создаем текстуру если её нет в кэше
+                    if (textureCache.find(tileKey) == textureCache.end()) {
+                        GLuint texId;
+                        glGenTextures(1, &texId);
+                        glBindTexture(GL_TEXTURE_2D, texId);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+                        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+                        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 
+                                    tile->width, tile->height, 0, GL_RGBA,
+                                    GL_UNSIGNED_BYTE, tile->rgbaData.data());
+                        
+                        textureCache[tileKey] = texId;
+                        
+                        // Проверка ошибок OpenGL
+                        GLenum err = glGetError();
+                        if (err != GL_NO_ERROR) {
+                            cout << "OpenGL error creating texture: " << err << endl;
+                        }
+                    }
+                    
+                    // Вычисляем позицию тайла на экране
+                    double centerX = tileManager.lon2x(mapLon, mapZoom);
+                    double centerY = tileManager.lat2y(mapLat, mapZoom);
+                    
+                    double tileX = (double)tile->x;
+                    double tileY = (double)tile->y;
+                    
+                    int offsetX = (int)((tileX - centerX) * 256 + windowSize.x/2);
+                    int offsetY = (int)((tileY - centerY) * 256 + windowSize.y/2);
+                    
+                    // Отображаем тайл
+                    ImVec2 pmin = ImVec2(windowPos.x + offsetX, windowPos.y + offsetY);
+                    ImVec2 pmax = ImVec2(pmin.x + 256, pmin.y + 256);
+                    
+                    ImGui::GetWindowDrawList()->AddImage(
+                        (void*)(intptr_t)textureCache[tileKey], pmin, pmax
+                    );
+                }
+            }
+            
+            // Показываем информацию
+            ImGui::SetCursorScreenPos(windowPos);
+            ImGui::Text("Zoom: %d | Lat: %.6f | Lon: %.6f | Tiles: %zu", 
+                        mapZoom, mapLat, mapLon, visibleTiles.size());
+        }
+        
+        ImGui::End();
+    }
+
+
+
+
+
 // 3.3) Отправляем на рендер;
         ImGui::Render();
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -698,6 +1062,13 @@ void run_gui(){
 
         SDL_GL_SwapWindow(window);
     }
+
+    // Очистка текстур
+    for (auto& [key, texId] : textureCache) {
+        glDeleteTextures(1, &texId);
+    }
+    textureCache.clear();
+
 // 4) Закрываем приложение безопасно.
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplSDL2_Shutdown();

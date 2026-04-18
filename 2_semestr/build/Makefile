@@ -155,6 +155,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/TileManager.o: src/TileManager.cpp.o
+.PHONY : src/TileManager.o
+
+# target to build an object file
+src/TileManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileManager.cpp.o
+.PHONY : src/TileManager.cpp.o
+
+src/TileManager.i: src/TileManager.cpp.i
+.PHONY : src/TileManager.i
+
+# target to preprocess a source file
+src/TileManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileManager.cpp.i
+.PHONY : src/TileManager.cpp.i
+
+src/TileManager.s: src/TileManager.cpp.s
+.PHONY : src/TileManager.s
+
+# target to generate assembly for a file
+src/TileManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileManager.cpp.s
+.PHONY : src/TileManager.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -430,6 +454,9 @@ help:
 	@echo "... imgui"
 	@echo "... implot"
 	@echo "... main"
+	@echo "... src/TileManager.o"
+	@echo "... src/TileManager.i"
+	@echo "... src/TileManager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

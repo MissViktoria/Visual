@@ -16,11 +16,23 @@ include_directories(${SDL2_INCLUDE_DIRS})
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
-# ZeroMQ - ИСПРАВЛЕНО!
+# ZeroMQ 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(ZMQ REQUIRED libzmq)
 
 include_directories(${INCLUDE_DIR} ${ZMQ_INCLUDE_DIRS})
+
+# PostgreSQL
+find_package(PostgreSQL REQUIRED)
+include_directories(${PostgreSQL_INCLUDE_DIRS})
+link_directories(${PostgreSQL_LIBRARY_DIRS})
+
+
+find_package(CURL REQUIRED)
+include_directories(${CURL_INCLUDE_DIRS})
+include_directories(/usr/include)
+
+
 
 add_library(imgui STATIC
     ${THIRD_PARTY_DIR}/imgui/imgui.cpp
@@ -43,7 +55,7 @@ target_include_directories(implot PUBLIC ${THIRD_PARTY_DIR}/implot)
 target_link_libraries(implot PRIVATE imgui)
 target_compile_options(implot PRIVATE -fPIC)
 
-add_executable(main ${SRC_DIR}/main.cpp)
+add_executable(main ${SRC_DIR}/main.cpp ${SRC_DIR}/TileManager.cpp)
 
 target_link_libraries(main PRIVATE 
     imgui 
@@ -51,5 +63,7 @@ target_link_libraries(main PRIVATE
     ${SDL2_LIBRARIES} 
     ${OPENGL_LIBRARIES} 
     ${GLEW_LIBRARIES}
-    ${ZMQ_LIBRARIES} 
+    ${ZMQ_LIBRARIES}
+    PostgreSQL::PostgreSQL 
+    ${CURL_LIBRARIES}
 )

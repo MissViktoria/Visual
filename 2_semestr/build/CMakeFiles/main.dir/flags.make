@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/include -I/usr/include/mit-krb5 -I/usr/include/pgm-5.3 -I/usr/include/libxml2 -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot
+CXX_INCLUDES = -I/usr/include/SDL2 -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/include -I/usr/include/mit-krb5 -I/usr/include/pgm-5.3 -I/usr/include/libxml2 -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui -I/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot -isystem /usr/include/postgresql
 
 CXX_FLAGS =  -pthread
 

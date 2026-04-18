@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/TileManager.cpp" "CMakeFiles/main.dir/src/TileManager.cpp.o" "gcc" "CMakeFiles/main.dir/src/TileManager.cpp.o.d"
   "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
   )
 

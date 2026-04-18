@@ -1,0 +1,55 @@
+                                            Table "public.data"
+       Column       |            Type             | Collation | Nullable |             Default              
+--------------------+-----------------------------+-----------+----------+----------------------------------
+ id                 | integer                     |           | not null | nextval('data_id_seq'::regclass)
+ timestamp          | bigint                      |           | not null | 
+ latitude           | double precision            |           |          | 
+ longitude          | double precision            |           |          | 
+ altitude           | double precision            |           |          | 
+ accuracy           | real                        |           |          | 
+ location_time      | character varying(50)       |           |          | 
+ network_type       | character varying(20)       |           |          | 
+ lte_band           | integer                     |           |          | 
+ lte_earfcn         | integer                     |           |          | 
+ lte_mcc            | integer                     |           |          | 
+ lte_mnc            | integer                     |           |          | 
+ lte_pci            | integer                     |           |          | 
+ lte_tac            | integer                     |           |          | 
+ lte_cell_identity  | character varying(50)       |           |          | 
+ lte_asu_level      | integer                     |           |          | 
+ lte_cqi            | integer                     |           |          | 
+ lte_rsrp           | integer                     |           |          | 
+ lte_rsrq           | integer                     |           |          | 
+ lte_rssi           | integer                     |           |          | 
+ lte_rssnr          | integer                     |           |          | 
+ lte_timing_advance | integer                     |           |          | 
+ gsm_bsic           | integer                     |           |          | 
+ gsm_arfcn          | integer                     |           |          | 
+ gsm_lac            | integer                     |           |          | 
+ gsm_mcc            | integer                     |           |          | 
+ gsm_mnc            | integer                     |           |          | 
+ gsm_psc            | integer                     |           |          | 
+ gsm_cell_identity  | character varying(50)       |           |          | 
+ gsm_dbm            | integer                     |           |          | 
+ gsm_rssi           | integer                     |           |          | 
+ gsm_timing_advance | integer                     |           |          | 
+ nr_band            | integer                     |           |          | 
+ nr_nci             | integer                     |           |          | 
+ nr_pci             | integer                     |           |          | 
+ nr_nrarfcn         | integer                     |           |          | 
+ nr_tac             | integer                     |           |          | 
+ nr_mcc             | integer                     |           |          | 
+ nr_mnc             | integer                     |           |          | 
+ nr_ssrsrp          | integer                     |           |          | 
+ nr_ssrsrq          | integer                     |           |          | 
+ nr_sssinr          | integer                     |           |          | 
+ nr_timing_advance  | integer                     |           |          | 
+ total_tx_bytes     | bigint                      |           |          | 
+ total_rx_bytes     | bigint                      |           |          | 
+ created_at         | timestamp without time zone |           |          | CURRENT_TIMESTAMP
+Indexes:
+    "data_pkey" PRIMARY KEY, btree (id)
+    "idx_lte_pci" btree (lte_pci)
+    "idx_nr_pci" btree (nr_pci)
+    "idx_timestamp" btree ("timestamp")
+

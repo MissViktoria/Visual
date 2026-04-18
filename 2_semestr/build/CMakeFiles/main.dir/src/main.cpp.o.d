@@ -425,9 +425,12 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
- /usr/include/c++/11/atomic \
+ /usr/include/c++/11/atomic /usr/include/postgresql/libpq-fe.h \
+ /usr/include/postgresql/postgres_ext.h \
+ /usr/include/postgresql/pg_config_ext.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/backends/imgui_impl_opengl3.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imgui.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imconfig.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.h \
- /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot.h
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot.h \
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/../include/TileManager.h
