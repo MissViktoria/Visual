@@ -27,7 +27,7 @@ import java.util.*
 class CellDataService : Service(), LocationListener {
 
     private val TAG = "CellDataService"
-    private val SERVER_IP = "192.168.0.107"
+    private val SERVER_IP = "192.168.1.40"
     private val SERVER_PORT = "7777"
     private val UPDATE_TIME = 5000L  // Каждые 5 секунд собираем данные
     private val RECONNECT_DELAY = 5000L

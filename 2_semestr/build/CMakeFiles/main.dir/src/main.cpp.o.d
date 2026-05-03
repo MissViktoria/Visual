@@ -433,4 +433,7 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/imconfig.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/imgui/backends/imgui_impl_sdl2.h \
  /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/third_party/implot/implot.h \
- /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/../include/TileManager.h
+ /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/../include/TileManager.h \
+ /usr/include/c++/11/queue /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/bits/stl_queue.h

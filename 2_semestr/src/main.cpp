@@ -589,12 +589,12 @@ void run_gui(){
     static TileManager tileManager;
     
     // Переменные для карты
-    static double mapLat = 55.051661;   // твоя широта
-    static double mapLon = 82.914767;   // твоя долгота  
-    static int mapZoom = 16;
-    static bool dragging = false;
-    static ImVec2 lastMousePos;
-    static GLuint mapTexture = 0;
+    // static double mapLat = 55.051661;   // твоя широта
+    // static double mapLon = 82.914767;   // твоя долгота  
+    // static int mapZoom = 16;
+    // static bool dragging = false;
+    // static ImVec2 lastMousePos;
+    // static GLuint mapTexture = 0;
 
     // Хранилище текстур для тайлов 
     static map<string, GLuint> textureCache;
@@ -941,7 +941,7 @@ void run_gui(){
 
 
 
-    // Новое окно с картой OSM
+            // Новое окно с картой OSM
     {
         ImGui::Begin("OpenStreetMap Card", nullptr);
         
@@ -951,17 +951,29 @@ void run_gui(){
         
         if (windowSize.x > 100 && windowSize.y > 100) {
             
-            // Обработка колесика мыши для zoom
+            // Переменные для управления картой
+            static double mapLat = 55.051661;   // твоя широта
+            static double mapLon = 82.914767;   // твоя долгота  
+            static int mapZoom = 16;
+            static bool dragging = false;
+            static ImVec2 lastMousePos;
+            
+            // Обработка ввода мыши
             ImGuiIO& io = ImGui::GetIO();
             if (ImGui::IsWindowHovered()) {
+                // Зум колесиком
                 float scroll = io.MouseWheel;
                 if (scroll != 0) {
-                    mapZoom += (scroll > 0 ? 1 : -1);
-                    mapZoom = max(0, min(18, mapZoom));
+                    int newZoom = mapZoom + (scroll > 0 ? 1 : -1);
+                    newZoom = std::max(0, std::min(18, newZoom));
+                    if (newZoom != mapZoom) {
+                        tileManager.clearQueue();  // ОЧИЩАЕМ ОЧЕРЕДЬ ПРИ СМЕНЕ ЗУМА
+                        mapZoom = newZoom;
+                    }
                 }
                 
-                // Перетаскивание карты
-                if (ImGui::IsMouseDragging(ImGuiMouseButton_Left)) {
+                // Перетаскивание правой кнопкой
+                if (ImGui::IsMouseDragging(ImGuiMouseButton_Right, 0.5f)) {
                     if (!dragging) {
                         dragging = true;
                         lastMousePos = ImGui::GetMousePos();
@@ -970,15 +982,12 @@ void run_gui(){
                         delta.x = ImGui::GetMousePos().x - lastMousePos.x;
                         delta.y = ImGui::GetMousePos().y - lastMousePos.y;
                         
-                        // Конвертируем пиксельное смещение в градусы
                         double lonPerPixel = 360.0 / (1 << mapZoom) / 256.0;
                         double latPerPixel = 170.0 / (1 << mapZoom) / 256.0;
                         
                         mapLon -= delta.x * lonPerPixel;
                         mapLat += delta.y * latPerPixel;
-                        
-                        // Ограничиваем широту
-                        mapLat = max(-85.0, min(85.0, mapLat));
+                        mapLat = std::max(-85.0, std::min(85.0, mapLat));
                         
                         lastMousePos = ImGui::GetMousePos();
                     }
@@ -1013,12 +1022,6 @@ void run_gui(){
                                     GL_UNSIGNED_BYTE, tile->rgbaData.data());
                         
                         textureCache[tileKey] = texId;
-                        
-                        // Проверка ошибок OpenGL
-                        GLenum err = glGetError();
-                        if (err != GL_NO_ERROR) {
-                            cout << "OpenGL error creating texture: " << err << endl;
-                        }
                     }
                     
                     // Вычисляем позицию тайла на экране
