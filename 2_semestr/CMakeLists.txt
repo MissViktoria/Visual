@@ -27,12 +27,13 @@ find_package(PostgreSQL REQUIRED)
 include_directories(${PostgreSQL_INCLUDE_DIRS})
 link_directories(${PostgreSQL_LIBRARY_DIRS})
 
-
+# CURL
 find_package(CURL REQUIRED)
 include_directories(${CURL_INCLUDE_DIRS})
 include_directories(/usr/include)
 
-
+# nlohmann_json
+find_package(nlohmann_json REQUIRED)
 
 add_library(imgui STATIC
     ${THIRD_PARTY_DIR}/imgui/imgui.cpp
@@ -55,7 +56,15 @@ target_include_directories(implot PUBLIC ${THIRD_PARTY_DIR}/implot)
 target_link_libraries(implot PRIVATE imgui)
 target_compile_options(implot PRIVATE -fPIC)
 
-add_executable(main ${SRC_DIR}/main.cpp ${SRC_DIR}/TileManager.cpp)
+# Исходные файлы проекта
+add_executable(main 
+    ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/server.cpp
+    ${SRC_DIR}/database.cpp
+    ${SRC_DIR}/gui.cpp
+    ${SRC_DIR}/data_parser.cpp
+    ${SRC_DIR}/TileManager.cpp
+)
 
 target_link_libraries(main PRIVATE 
     imgui 
@@ -66,4 +75,5 @@ target_link_libraries(main PRIVATE
     ${ZMQ_LIBRARIES}
     PostgreSQL::PostgreSQL 
     ${CURL_LIBRARIES}
+    nlohmann_json::nlohmann_json
 )

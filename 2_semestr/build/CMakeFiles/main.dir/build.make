@@ -83,10 +83,66 @@ CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
+CMakeFiles/main.dir/src/server.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/server.cpp.o: ../src/server.cpp
+CMakeFiles/main.dir/src/server.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/server.cpp.o -MF CMakeFiles/main.dir/src/server.cpp.o.d -o CMakeFiles/main.dir/src/server.cpp.o -c /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/server.cpp
+
+CMakeFiles/main.dir/src/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/server.cpp > CMakeFiles/main.dir/src/server.cpp.i
+
+CMakeFiles/main.dir/src/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/server.cpp -o CMakeFiles/main.dir/src/server.cpp.s
+
+CMakeFiles/main.dir/src/database.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/database.cpp.o: ../src/database.cpp
+CMakeFiles/main.dir/src/database.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/database.cpp.o -MF CMakeFiles/main.dir/src/database.cpp.o.d -o CMakeFiles/main.dir/src/database.cpp.o -c /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/database.cpp
+
+CMakeFiles/main.dir/src/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/database.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/database.cpp > CMakeFiles/main.dir/src/database.cpp.i
+
+CMakeFiles/main.dir/src/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/database.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/database.cpp -o CMakeFiles/main.dir/src/database.cpp.s
+
+CMakeFiles/main.dir/src/gui.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/gui.cpp.o: ../src/gui.cpp
+CMakeFiles/main.dir/src/gui.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/gui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/gui.cpp.o -MF CMakeFiles/main.dir/src/gui.cpp.o.d -o CMakeFiles/main.dir/src/gui.cpp.o -c /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/gui.cpp
+
+CMakeFiles/main.dir/src/gui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/gui.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/gui.cpp > CMakeFiles/main.dir/src/gui.cpp.i
+
+CMakeFiles/main.dir/src/gui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/gui.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/gui.cpp -o CMakeFiles/main.dir/src/gui.cpp.s
+
+CMakeFiles/main.dir/src/data_parser.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/data_parser.cpp.o: ../src/data_parser.cpp
+CMakeFiles/main.dir/src/data_parser.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/data_parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/data_parser.cpp.o -MF CMakeFiles/main.dir/src/data_parser.cpp.o.d -o CMakeFiles/main.dir/src/data_parser.cpp.o -c /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/data_parser.cpp
+
+CMakeFiles/main.dir/src/data_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/data_parser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/data_parser.cpp > CMakeFiles/main.dir/src/data_parser.cpp.i
+
+CMakeFiles/main.dir/src/data_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/data_parser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/data_parser.cpp -o CMakeFiles/main.dir/src/data_parser.cpp.s
+
 CMakeFiles/main.dir/src/TileManager.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/TileManager.cpp.o: ../src/TileManager.cpp
 CMakeFiles/main.dir/src/TileManager.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/TileManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/TileManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/TileManager.cpp.o -MF CMakeFiles/main.dir/src/TileManager.cpp.o.d -o CMakeFiles/main.dir/src/TileManager.cpp.o -c /mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/TileManager.cpp
 
 CMakeFiles/main.dir/src/TileManager.cpp.i: cmake_force
@@ -100,12 +156,20 @@ CMakeFiles/main.dir/src/TileManager.cpp.s: cmake_force
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/src/main.cpp.o" \
+"CMakeFiles/main.dir/src/server.cpp.o" \
+"CMakeFiles/main.dir/src/database.cpp.o" \
+"CMakeFiles/main.dir/src/gui.cpp.o" \
+"CMakeFiles/main.dir/src/data_parser.cpp.o" \
 "CMakeFiles/main.dir/src/TileManager.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
+main: CMakeFiles/main.dir/src/server.cpp.o
+main: CMakeFiles/main.dir/src/database.cpp.o
+main: CMakeFiles/main.dir/src/gui.cpp.o
+main: CMakeFiles/main.dir/src/data_parser.cpp.o
 main: CMakeFiles/main.dir/src/TileManager.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: libimgui.a
@@ -118,7 +182,7 @@ main: /usr/lib/x86_64-linux-gnu/libpq.so
 main: /usr/lib/x86_64-linux-gnu/libcurl.so
 main: libimgui.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

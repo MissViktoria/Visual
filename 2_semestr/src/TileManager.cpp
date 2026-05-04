@@ -13,12 +13,39 @@
 #include <unistd.h> 
 #include <thread>
 #include <chrono>
+#include <cerrno>
+#include <cstring>
 
 #define PI 3.14159265358979323846
 #define RAD (PI / 180.0)
 #define DEG (180.0 / PI)
 
 using namespace std;
+
+// Рекурсивное создание директорий
+static bool createDirectoriesRecursive(const string& path) {
+    string currentPath;
+    size_t pos = 0;
+    
+    // Начинаем с корня cacheDir
+    string fullPath = path;
+    
+    // Разбираем путь по частям и создаём каждую директорию
+    while ((pos = fullPath.find_first_of("/", pos + 1)) != string::npos) {
+        currentPath = fullPath.substr(0, pos);
+        if (currentPath.empty()) continue;
+        
+        // Пробуем создать директорию
+        if (mkdir(currentPath.c_str(), 0777) != 0) {
+            if (errno != EEXIST) {
+                cerr << "Failed to create directory: " << currentPath << " - " << strerror(errno) << endl;
+                return false;
+            }
+        }
+    }
+    
+    return true;
+}
 
 // Callback для curl
 size_t TileManager::writeCallback(void* data, size_t size, size_t nmemb, void* userp) {
@@ -53,19 +80,41 @@ TileManager::TileManager() {
 }
 
 TileManager::~TileManager() {
-    // Останавливаем фоновый поток
-    workerRunning = false;
-    if (workerThread.joinable()) {
-        workerThread.join();
+    cacheDir = "tile_cache";
+    
+    // Создаём корневую директорию (с проверкой)
+    if (mkdir(cacheDir.c_str(), 0777) != 0 && errno != EEXIST) {
+        cerr << "Failed to create cache directory: " << cacheDir << " - " << strerror(errno) << endl;
     }
     
-    // Очищаем curl
-    curl_global_cleanup();
+    // Инициализируем curl глобально
+    curl_global_init(CURL_GLOBAL_DEFAULT);
+    
+    // Запускаем фоновый поток для загрузки тайлов
+    workerRunning = true;
+    workerThread = std::thread(&TileManager::workerFunction, this);
 }
-
 string TileManager::getTilePath(int z, int x, int y) {
     string dir = cacheDir + "/" + to_string(z) + "/" + to_string(x);
-    mkdir(dir.c_str(), 0777); // создаем вложенные директории
+    
+    // Создаём директории рекурсивно
+    string path = "";
+    size_t pos = 0;
+    string tempPath = dir;
+    
+    // Создаём каждую поддиректорию
+    while ((pos = tempPath.find_first_of("/", pos + 1)) != string::npos) {
+        string subPath = tempPath.substr(0, pos);
+        if (mkdir(subPath.c_str(), 0777) != 0 && errno != EEXIST) {
+            cerr << "Failed to create: " << subPath << " - " << strerror(errno) << endl;
+        }
+    }
+    
+    // Создаём последнюю директорию
+    if (mkdir(dir.c_str(), 0777) != 0 && errno != EEXIST) {
+        cerr << "Failed to create: " << dir << " - " << strerror(errno) << endl;
+    }
+    
     return dir + "/" + to_string(y) + ".png";
 }
 
@@ -114,11 +163,18 @@ bool TileManager::loadFromFile(Tile& tile) {
 
 bool TileManager::saveToFile(const Tile& tile) {
     string path = getTilePath(tile.z, tile.x, tile.y);
+    cout << "Saving tile to: " << path << " (size: " << tile.rawData.size() << " bytes)" << endl;
+    
     ofstream file(path, ios::binary);
-    if (!file.is_open()) return false;
+    if (!file.is_open()) {
+        cerr << "ERROR: Cannot open file for writing: " << path << endl;
+        return false;
+    }
     
     file.write(reinterpret_cast<const char*>(tile.rawData.data()), tile.rawData.size());
     file.close();
+    
+    cout << "Successfully saved!" << endl;
     return true;
 }
 

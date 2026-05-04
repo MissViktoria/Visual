@@ -9,7 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/TileManager.cpp" "CMakeFiles/main.dir/src/TileManager.cpp.o" "gcc" "CMakeFiles/main.dir/src/TileManager.cpp.o.d"
+  "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/data_parser.cpp" "CMakeFiles/main.dir/src/data_parser.cpp.o" "gcc" "CMakeFiles/main.dir/src/data_parser.cpp.o.d"
+  "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/database.cpp" "CMakeFiles/main.dir/src/database.cpp.o" "gcc" "CMakeFiles/main.dir/src/database.cpp.o.d"
+  "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/gui.cpp" "CMakeFiles/main.dir/src/gui.cpp.o" "gcc" "CMakeFiles/main.dir/src/gui.cpp.o.d"
   "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/mnt/c/Users/marak/Desktop/Visual/Visual/2_semestr/src/server.cpp" "CMakeFiles/main.dir/src/server.cpp.o" "gcc" "CMakeFiles/main.dir/src/server.cpp.o.d"
   )
 
 # Targets to which this target links.
